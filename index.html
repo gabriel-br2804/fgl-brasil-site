@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head><script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "FGL Brasil",
+ "url": "https://fglbrasil.com",
+ "logo": "https://fglbrasil.com/logo-fgl.png"
+}
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://www.fglbrasil.com/">
+<link rel="icon" type="image/png" sizes="512x512" href="https://fglbrasil.com/favicon.png">
+<link rel="shortcut icon" href="https://fglbrasil.com/favicon.png">
+
+
+<title>FGL Brasil Terceirização | Portaria, Limpeza e Vigilância </title>
+<meta name="description" content="Empresa especializada em terceirização de portaria, limpeza, vigilância, controlador de acesso e serviços corporativos. Receba um orçamento personalizado em até 24h com análise e visita técnica ao local. FGL Brasil.">
+
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+html{
+scroll-behavior:smooth;
+scroll-padding-top:90px;
+}
+body{background:#fff;color:#111;overflow-x:hidden}
+
+/* NAV */
+   /* HEADER NOVO */
+header{
+position:fixed;
+top:0;
+width:100%;
+background:#ff6a00;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 7%;
+z-index:999;
+}
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-img{
+height:55px;
+}
+
+.logo-nome{
+font-family:'Montserrat',sans-serif;
+font-weight:800;
+font-size:20px;
+color:#fff;
+letter-spacing:1px;
+}
+
+/* MENU NORMAL PC */
+nav{
+display:flex;
+gap:35px;
+}
+
+nav a{
+text-decoration:none;
+color:#fff;
+font-weight:500;
+font-family:'Montserrat',sans-serif;
+}
+
+/* BOTAO HAMBURGUER */
+.menu-toggle{
+display:none;
+font-size:28px;
+color:#fff;
+cursor:pointer;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+.menu-toggle{
+display:block;
+}
+
+nav{
+position:absolute;
+top:70px;
+right:0;
+background:#ff6a00;
+width:100%;
+flex-direction:column;
+align-items:center;
+gap:22px;
+padding:30px 0;
+display:none;
+box-shadow:0 25px 60px rgba(0,0,0,.25);
+}
+
+nav a{
+font-size:20px;
+font-weight:700;
+letter-spacing:.3px;
+}
+
+
+nav.active{
+display:flex;
+}
+
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+url("https://019c1003-6a1a-7232-95dd-d7c8f5c92897.mochausercontent.com/ChatGPT-Image-30-de-jan.-de-2026-16_53_06.png");
+background-size:cover;
+background-position:center;
+color:#fff;
+}
+.hero-content{max-width:900px}
+.hero h1{
+font-size:60px;
+font-weight:800;
+line-height:1.1;
+margin-bottom:20px;
+font-family:'Montserrat',sans-serif;
+letter-spacing:-1px;
+}
+.hero p{
+font-size:22px;
+opacity:.95;
+margin-bottom:35px;
+}
+.btn{
+display:inline-block;
+padding:18px 36px;
+border-radius:10px;
+background:#ff6a00;
+color:#fff;
+text-decoration:none;
+font-weight:600;
+margin:8px;
+transition:.3s;
+box-shadow:0 10px 30px rgba(255,106,0,.35);
+}
+.btn:hover{transform:translateY(-3px);opacity:.9}
+
+/* SECTIONS */
+.section{padding:120px 8%}
+.section-title{
+font-size:42px;
+font-weight:800;
+margin-bottom:5px;
+font-family:'Montserrat',sans-serif;
+letter-spacing:-.5px;
+}
+
+.orange-line{
+width:70px;
+height:4px;
+background:#ff6a00;
+border-radius:4px;
+margin:15px 0 30px 0;
+}
+
+.section-sub{
+text-align:center;
+color:#666;
+margin-bottom:60px;
+font-size:17px;
+}
+
+/* ABOUT */
+.about-grid{
+display:grid;
+display:grid;grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+.about-text{
+font-size:18px;
+color:#444;
+line-height:1.9;
+}
+.about-text strong{color:#000}
+.about-highlight{
+color:#ff6a00;
+font-weight:600;
+}
+.about-img img{
+width:100%;
+border-radius:16px;
+box-shadow:0 25px 60px rgba(0,0,0,.18);
+}
+
+/* VALORES */
+.values{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:50px;
+}
+.value{
+background:#fff;
+padding:30px;
+border-radius:14px;
+border:1px solid rgba(0,0,0,.06);
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+transition:.3s;
+}
+.value:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+.icon{
+width:44px;
+height:44px;
+background:#ff6a00;
+border-radius:12px;
+margin-bottom:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+font-weight:700;
+font-size:18px;
+}
+.value h4{
+font-size:19px;
+margin-bottom:8px;
+font-family:'Montserrat',sans-serif;
+}
+.value p{
+font-size:15px;
+color:#555;
+line-height:1.6;
+}
+
+/* SERVICES */
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:40px;
+margin-top:40px;
+}
+.card{
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 20px 60px rgba(0,0,0,.08);
+transition:.3s;
+}
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 30px 80px rgba(255,106,0,.15);
+}
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+.card-content{
+padding:25px;
+}
+.card-content h3{
+font-size:22px;
+margin-bottom:10px;
+font-family:'Montserrat',sans-serif;
+}
+.card-content p{
+color:#666;
+font-size:15px;
+line-height:1.6;
+}
+
+/* CTA */
+.cta{
+background:#ff6a00;
+color:#fff;
+text-align:center;
+padding:110px 20px;
+}
+.cta h2{
+font-size:44px;
+margin-bottom:15px;
+font-family:'Montserrat',sans-serif;
+}
+.cta p{
+opacity:.95;
+margin-bottom:30px;
+font-size:18px;
+}
+.cta .btn{
+background:#fff;
+color:#ff6a00;
+box-shadow:none;
+font-weight:700;
+}
+
+/* FOOTER */
+footer{
+background:#111;
+color:#aaa;
+padding:60px 8%;
+text-align:center;
+font-size:14px;
+}
+footer strong{color:#fff}
+
+/* WHATS */
+.whats{
+position:fixed;
+right:25px;
+bottom:25px;
+background:#25D366;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+color:#fff;
+text-decoration:none;
+box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+@media(max-width:900px){
+
+.hero h1{font-size:36px}
+.hero p{font-size:18px}
+.section-title{font-size:32px}
+.about-grid{grid-template-columns:1fr}
+
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo-area">
+<img src="logo-fgl.png" class="logo-img">
+<div class="logo-nome">FGL BRASIL</div>
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="menu">
+<a href="#sobre">Sobre Nós</a>
+<a href="#servicos">Serviços</a>
+<a href="#faq">Perguntas Frequentes</a>
+<a href="#contato">Contato</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+<div class="hero-content">
+<h1>Cuidamos da operação para que sua empresa funcione com excelência</h1>
+<p>Terceirização de serviços com ética, eficiência e compromisso humano.</p>
+<a class="btn" href="https://wa.me/5511978316351">Solicitar Orçamento</a>
+</div>
+</section>
+
+<section id="sobre" class="section">
+<div class="about-grid">
+
+<div>
+<h2 class="section-title">Sobre o Grupo FGL Brasil</h2>
+<div class="orange-line"></div>
+
+<div class="about-text">
+<p>
+O <strong>Grupo FGL Brasil</strong> nasceu com o propósito de oferecer terceirização de serviços com <strong>responsabilidade, ética e excelência.</strong>
+</p>
+<br>
+<p>
+Acreditamos que cada profissional terceirizado representa nossa marca no dia a dia dos clientes, por isso investimos em <strong>processos, pessoas e acompanhamento constante.</strong>
+</p>
+<br>
+<p class="about-highlight">
+Nossa missão é fazer sua operação funcionar perfeitamente, para que você possa focar no crescimento do seu negócio.
+</p>
+</div>
+</div>
+
+<div class="about-img">
+<img src="https://019c1003-6a1a-7232-95dd-d7c8f5c92897.mochausercontent.com/sobre-fgl.png">
+</div>
+
+</div>
+</section>
+
+<section class="section" style="background:#fff7f2">
+<h2 class="section-title" style="text-align:center">Valores que Guiam Nossa Atuação</h2>
+
+<div class="values">
+
+<div class="value">
+<div class="icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+<path d="M12 2L20 6V12C20 17 16.5 21 12 22C7.5 21 4 17 4 12V6L12 2Z" stroke="white" stroke-width="2"/>
+</svg>
+</div>
+<h4>Ética e Transparência</h4>
+<p>Atuação com total respeito às normas e compromisso com a verdade.</p>
+</div>
+
+<div class="value">
+<div class="icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+<circle cx="8" cy="8" r="4" stroke="white" stroke-width="2"/>
+<circle cx="17" cy="10" r="3" stroke="white" stroke-width="2"/>
+<path d="M2 20C2 16 5 14 8 14C11 14 14 16 14 20" stroke="white" stroke-width="2"/>
+<path d="M14 20C14 17.5 16 16 18 16C20 16 22 17.5 22 20" stroke="white" stroke-width="2"/>
+</svg>
+</div>
+<h4>Compromisso com Pessoas</h4>
+<p>Valorizamos cada colaborador como parte essencial da nossa equipe.</p>
+</div>
+
+<div class="value">
+<div class="icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+<path d="M12 17L18 21L16 14L22 10L14.5 9L12 2L9.5 9L2 10L8 14L6 21L12 17Z" stroke="white" stroke-width="2"/>
+</svg>
+</div>
+<h4>Excelência Operacional</h4>
+<p>Buscamos a máxima qualidade em cada serviço prestado.</p>
+</div>
+
+<div class="value">
+<div class="icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+<path d="M12 3V21M3 7H21M5 7C5 13 9 17 12 17C15 17 19 13 19 7" stroke="white" stroke-width="2"/>
+</svg>
+</div>
+<h4>Responsabilidade Trabalhista</h4>
+<p>Cumprimento rigoroso de toda legislação vigente.</p>
+</div>
+
+<div class="value">
+<div class="icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+<path d="M8 12L11 15L16 9" stroke="white" stroke-width="2"/>
+<circle cx="12" cy="12" r="9" stroke="white" stroke-width="2"/>
+</svg>
+</div>
+<h4>Confiança e Proximidade</h4>
+<p>Relacionamentos sólidos e duradouros com clientes.</p>
+</div>
+
+<div class="value">
+<div class="icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+<path d="M3 17L9 11L13 15L21 7" stroke="white" stroke-width="2"/>
+<path d="M21 7H15M21 7V13" stroke="white" stroke-width="2"/>
+</svg>
+</div>
+<h4>Foco em Resultados</h4>
+<p>Soluções eficientes que geram valor real.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" style="background:#fff;">
+<div style="max-width:1100px;margin:auto;display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;">
+
+<div>
+<h2 class="section-title">Gestão Profissional e Acompanhamento Contínuo</h2>
+<div class="orange-line"></div>
+
+<p style="font-size:18px;color:#444;line-height:1.9;margin-bottom:18px;">
+Atuamos com <strong>rigor absoluto no cumprimento das leis trabalhistas</strong>, garantindo segurança jurídica, transparência e tranquilidade total para nossos clientes.
+</p>
+
+<p style="font-size:18px;color:#444;line-height:1.9;margin-bottom:18px;">
+Utilizamos <strong>tecnologia e inteligência artificial</strong> para acompanhamento dos postos terceirizados, controle de presença, análise de desempenho e monitoramento contínuo das operações.
+</p>
+
+<p style="font-size:18px;color:#444;line-height:1.9;margin-bottom:18px;">
+Aliamos tecnologia a uma <strong>supervisão humanizada</strong>, com visitas técnicas presenciais, alinhamentos operacionais e acompanhamento próximo em cada contrato.
+</p>
+
+<p style="font-size:18px;color:#ff6a00;font-weight:600;">
+Nosso compromisso é garantir eficiência operacional, segurança jurídica e excelência no dia a dia da sua operação.
+</p>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600" style="width:100%;border-radius:18px;box-shadow:0 25px 70px rgba(0,0,0,.18);">
+
+</div>
+</section>
+
+<!-- SEGURANÇA JURÍDICA -->
+<section class="section" style="background:#fff;">
+<div class="juridica-grid">
+<div>
+<h2 class="section-title">Segurança Jurídica e Tranquilidade Total</h2>
+<div class="orange-line"></div>
+
+<p style="font-size:18px;color:#444;line-height:1.9;margin-bottom:18px;">
+Ao terceirizar com o <strong>Grupo FGL Brasil</strong>, sua empresa elimina riscos trabalhistas e ganha uma gestão profissional completa, com responsabilidade total sobre cada colaborador alocado.
+</p>
+
+<p style="font-size:18px;color:#444;line-height:1.9;margin-bottom:18px;">
+Nossa estrutura cuida de <strong>contratos, encargos, benefícios, substituições, folha de pagamento e conformidade legal</strong>, garantindo segurança jurídica e previsibilidade financeira.
+</p>
+
+<p style="font-size:18px;color:#ff6a00;font-weight:600;">
+Você foca no crescimento da sua operação enquanto nós assumimos toda a gestão operacional e trabalhista.
+</p>
+</div>
+
+<div style="background:#fff7f2;padding:35px;border-radius:18px;box-shadow:0 25px 70px rgba(0,0,0,.08);">
+
+<div style="display:flex;align-items:center;margin-bottom:18px;font-weight:600;">
+<div style="width:28px;height:28px;background:#ff6a00;border-radius:8px;margin-right:12px;display:flex;align-items:center;justify-content:center;">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+<path d="M6 12L10 16L18 8" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+
+Cumprimento rigoroso da legislação trabalhista
+</div>
+
+<div style="display:flex;align-items:center;margin-bottom:18px;font-weight:600;">
+<div style="width:28px;height:28px;background:#ff6a00;border-radius:8px;margin-right:12px;display:flex;align-items:center;justify-content:center;">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+<path d="M6 12L10 16L18 8" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+
+Encargos e obrigações totalmente regularizados
+</div>
+
+<div style="display:flex;align-items:center;margin-bottom:18px;font-weight:600;">
+<div style="width:28px;height:28px;background:#ff6a00;border-radius:8px;margin-right:12px;display:flex;align-items:center;justify-content:center;">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+<path d="M6 12L10 16L18 8" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+
+Substituição rápida em faltas ou férias
+</div>
+
+<div style="display:flex;align-items:center;margin-bottom:18px;font-weight:600;">
+<div style="width:28px;height:28px;background:#ff6a00;border-radius:8px;margin-right:12px;display:flex;align-items:center;justify-content:center;">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+<path d="M6 12L10 16L18 8" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+
+Supervisão e acompanhamento contínuo
+</div>
+
+<div style="display:flex;align-items:center;font-weight:600;">
+<div style="width:28px;height:28px;background:#ff6a00;border-radius:8px;margin-right:12px;display:flex;align-items:center;justify-content:center;">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+<path d="M6 12L10 16L18 8" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+
+Contratos claros e transparência total
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+
+<section id="servicos" class="section">
+<h2 class="section-title" style="text-align:center">Nossos Serviços</h2>
+<p class="section-sub">Soluções completas em terceirização para empresas, condomínios e indústrias</p>
+
+<div class="services">
+
+<div class="card">
+<img src="https://019c1003-6a1a-7232-95dd-d7c8f5c92897.mochausercontent.com/auxiliar-limpeza.png">
+<div class="card-content">
+<h3>Auxiliar de Limpeza</h3>
+<p>Limpeza, conservação e higienização com padrões rigorosos de qualidade para ambientes corporativos e condomínios.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://019c1003-6a1a-7232-95dd-d7c8f5c92897.mochausercontent.com/auxiliar-administrativo.png">
+<div class="card-content">
+<h3>Auxiliar Administrativo</h3>
+<p>Suporte administrativo qualificado para rotinas internas, atendimento e organização documental.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://019c1003-6a1a-7232-95dd-d7c8f5c92897.mochausercontent.com/controlador-acesso.png">
+<div class="card-content">
+<h3>Controlador de Acesso</h3>
+<p>Controle eficiente de entrada e saída com organização e segurança para empresas e condomínios.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://019c1003-6a1a-7232-95dd-d7c8f5c92897.mochausercontent.com/vigilancia-desarmada-executiva.png">
+<div class="card-content">
+<h3>Vigilância Desarmada</h3>
+<p>Presença preventiva e ostensiva para segurança patrimonial e controle de ambientes.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://019c1003-6a1a-7232-95dd-d7c8f5c92897.mochausercontent.com/jardinagem.png">
+<div class="card-content">
+<h3>Jardinagem</h3>
+<p>Manutenção de áreas verdes, paisagismo e conservação ambiental de alto padrão.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://019c1003-6a1a-7232-95dd-d7c8f5c92897.mochausercontent.com/terceirizacao-sob-medida.png">
+<div class="card-content">
+<h3>Terceirização Sob Medida</h3>
+<p>Soluções personalizadas com gestão dedicada e acompanhamento contínuo.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section" style="background:#fff7f2">
+<h2 class="section-title" style="text-align:center">Dúvidas Frequentes</h2>
+<p class="section-sub">Entenda como funciona a terceirização com o Grupo FGL Brasil</p>
+
+<div class="faq-container">
+
+<div class="faq-item">
+<div class="faq-question">Como funciona o processo de contratação?</div>
+<div class="faq-answer">
+Realizamos uma análise inicial da sua necessidade, seguida de visita técnica (quando necessário) e envio de proposta personalizada em até 24h. Após aprovação, iniciamos o processo de seleção e implantação da equipe.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">A FGL cuida de toda a parte trabalhista?</div>
+<div class="faq-answer">
+Sim. Toda a gestão trabalhista, folha de pagamento, encargos, benefícios, substituições e obrigações legais ficam sob responsabilidade do Grupo FGL Brasil, garantindo total segurança jurídica ao cliente.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Existe supervisão dos profissionais alocados?</div>
+<div class="faq-answer">
+Sim. Realizamos acompanhamento contínuo com supervisão operacional, visitas técnicas presenciais e monitoramento por tecnologia e inteligência artificial, garantindo qualidade constante no serviço prestado.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Em quanto tempo um posto pode ser implantado?</div>
+<div class="faq-answer">
+Dependendo da função e da urgência, conseguimos implantar profissionais em poucos dias. Para operações maiores ou personalizadas, definimos um cronograma estratégico junto ao cliente.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Posso terceirizar apenas um profissional?</div>
+<div class="faq-answer">
+Sim. Atendemos desde demandas pontuais com um único profissional até operações completas com múltiplos postos e gestão dedicada.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">A empresa atende condomínios e indústrias?</div>
+<div class="faq-answer">
+Sim. Atuamos em empresas, condomínios residenciais e comerciais, indústrias, centros logísticos, escritórios corporativos e operações personalizadas.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Os profissionais passam por treinamento?</div>
+<div class="faq-answer">
+Todos os colaboradores passam por seleção rigorosa, treinamento e alinhamento com os padrões do cliente antes de iniciar as atividades, garantindo postura, eficiência e profissionalismo.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Como solicitar um orçamento?</div>
+<div class="faq-answer">
+Basta clicar no botão de orçamento ou chamar diretamente no WhatsApp. Nossa equipe fará um diagnóstico rápido da sua operação e enviará uma proposta personalizada.
+</div>
+</div>
+
+</div>
+</section>
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+html, body{
+overflow-x:hidden;
+width:100%;
+}
+
+/* FAQ */
+.faq-container{
+max-width:900px;
+margin:50px auto 0 auto;
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+.faq-item{
+background:#fff;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+overflow:hidden;
+border:1px solid rgba(0,0,0,.06);
+transition:.3s;
+}
+
+.faq-question{
+padding:20px 25px;
+font-weight:600;
+font-family:'Montserrat',sans-serif;
+cursor:pointer;
+position:relative;
+font-size:17px;
+color:#111;
+}
+
+.faq-question:hover{
+background:#fff3eb;
+}
+
+.faq-question::after{
+content:"+";
+position:absolute;
+right:25px;
+font-size:22px;
+color:#ff6a00;
+transition:.3s;
+}
+
+.faq-item.active .faq-question::after{
+content:"−";
+}
+
+.faq-answer{
+max-height:0;
+overflow:hidden;
+transition:max-height .35s ease;
+padding:0 25px;
+color:#555;
+font-size:16px;
+line-height:1.7;
+}
+
+.faq-item.active .faq-answer{
+max-height:300px;
+padding:0 25px 22px 25px;
+}
+
+/* ===== HERO MOBILE ===== */
+@media(max-width:900px){
+
+.hero{
+width:100%;
+max-width:100%;
+overflow:hidden;
+padding:120px 20px 80px 20px;
+height:auto;
+min-height:100vh;
+}
+
+.hero-content{
+width:100%;
+max-width:100%;
+padding:0 5px;
+}
+
+.hero h1{
+font-size:34px;
+line-height:1.2;
+word-break:break-word;
+}
+
+.hero p{
+font-size:17px;
+padding:0 5px;
+}
+
+}
+
+/* ============================= */
+/* SEGURANÇA JURÍDICA — DESKTOP */
+/* ============================= */
+
+.juridica-grid{
+max-width:1150px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+/* ============================= */
+/* SEGURANÇA JURÍDICA — MOBILE */
+/* ============================= */
+
+@media(max-width:900px){
+
+.juridica-grid{
+display:flex !important;
+flex-direction:column !important;
+gap:30px !important;
+}
+
+.juridica-grid > div{
+width:100% !important;
+max-width:100% !important;
+}
+
+}
+
+</style>
+
+<script>
+// FAQ abrir e fechar
+document.querySelectorAll(".faq-question").forEach(q=>{
+q.addEventListener("click",()=>{
+const item = q.parentElement;
+item.classList.toggle("active");
+});
+});
+
+// abrir hamburger
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+// fechar hamburger ao clicar em qualquer item
+document.querySelectorAll("#menu a").forEach(link=>{
+link.addEventListener("click",()=>{
+document.getElementById("menu").classList.remove("active");
+});
+});
+</script>
+
+<section id="contato" class="cta">
+<h2>Pronto para elevar o padrão da sua operação?</h2>
+<p>Fale agora com nossa equipe e receba uma proposta personalizada.</p>
+<a class="btn" href="https://wa.me/5511978316351?text=Olá%20Robson,%20tudo%20bem?%20Vim%20pelo%20site%20da%20FGL%20Brasil%20e%20gostaria%20de%20solicitar%20um%20orçamento%20personalizado.%20Posso%20te%20passar%20algumas%20informações%20da%20operação.">
+Solicitar Orçamento Agora
+</a>
+</section>
+
+<footer>
+<p>
+<strong>Grupo FGL Brasil</strong><br>
+Terceirização de Serviços com Ética, Excelência e Compromisso Humano<br><br>
+Alphaville, SP<br><br>
+© 2026 Grupo FGL Brasil
+</p>
+</footer>
+
+<a class="whats" href="https://wa.me/5511978316351?text=Olá%20Robson,%20tudo%20bem?%20Vim%20pelo%20site%20da%20FGL%20Brasil%20e%20gostaria%20de%20solicitar%20um%20orçamento%20personalizado.%20Posso%20te%20passar%20algumas%20informações%20da%20operação.">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="32">
+</a>
+
+</body>
+</html>
+
+
+</body>
+</html>
