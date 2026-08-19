@@ -144,7 +144,7 @@
   @media(max-width:768px){ .nav-inner { padding: 0 24px; height: 68px; } }
 
   .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .brand-logo { height: 34px; width: auto; display: block; }
+  .brand-logo { height: 34px; width: auto; display: block; border-radius: 8px; }
   .brand-mark {
     font-size: 24px; font-weight: 800; letter-spacing: -0.5px; color: var(--graphite-900);
   }
@@ -467,6 +467,133 @@
   .footer-legal { display: flex; gap: 22px; }
   .footer-legal a { font-size: 12px; color: rgba(255,255,255,0.5); text-decoration: none; }
   .footer-legal a:hover { color: rgba(255,255,255,0.7); }
+  /* ─── QUOTE MODAL ─── */
+  .qm-overlay {
+    position: fixed; inset: 0; z-index: 1000;
+    background: rgba(20,22,26,0.55); backdrop-filter: blur(3px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px; opacity: 0; visibility: hidden;
+    transition: opacity 0.25s ease;
+  }
+  .qm-overlay.open { opacity: 1; visibility: visible; }
+  .qm-modal {
+    background: var(--white); border-radius: 20px; width: 100%; max-width: 560px;
+    max-height: 88vh; display: flex; flex-direction: column; overflow: hidden;
+    box-shadow: 0 30px 70px rgba(20,22,26,0.35);
+    transform: translateY(18px) scale(0.98); transition: transform 0.3s ease;
+  }
+  .qm-overlay.open .qm-modal { transform: translateY(0) scale(1); }
+  @media(max-width:640px){
+    .qm-overlay { padding: 0; align-items: stretch; }
+    .qm-modal { max-width: none; max-height: none; height: 100%; border-radius: 0; }
+  }
+
+  .qm-header { padding: 28px 32px 20px; border-bottom: 1px solid var(--line); flex-shrink: 0; position: relative; }
+  @media(max-width:640px){ .qm-header { padding: 22px 22px 16px; } }
+  .qm-close {
+    position: absolute; top: 20px; right: 20px; width: 36px; height: 36px; border-radius: 50%;
+    background: var(--off-white); border: none; color: var(--graphite-700); font-size: 20px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center; line-height: 1;
+    transition: background 0.2s, color 0.2s;
+  }
+  .qm-close:hover { background: var(--orange-tint); color: var(--orange-deep); }
+  .qm-kicker { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--orange-deep); margin-bottom: 10px; padding-right: 40px; }
+  .qm-title { font-size: 22px; font-weight: 800; color: var(--graphite-900); letter-spacing: -0.3px; padding-right: 40px; }
+  .qm-desc { font-size: 14px; color: var(--graphite-500); margin-top: 6px; line-height: 1.55; padding-right: 40px; }
+  .qm-progress { display: flex; align-items: center; gap: 12px; margin-top: 18px; }
+  .qm-progress-track { flex: 1; height: 5px; background: var(--line); border-radius: 3px; overflow: hidden; }
+  .qm-progress-fill { height: 100%; background: var(--orange); border-radius: 3px; transition: width 0.35s ease; }
+  .qm-progress-label { font-size: 12px; font-weight: 700; color: var(--graphite-500); flex-shrink: 0; white-space: nowrap; }
+
+  .qm-body { padding: 26px 32px; overflow-y: auto; flex: 1; }
+  @media(max-width:640px){ .qm-body { padding: 20px 22px; } }
+  .qm-step { animation: qmFadeIn 0.28s ease; }
+  @keyframes qmFadeIn { from { opacity: 0; transform: translateX(10px); } to { opacity: 1; transform: translateX(0); } }
+
+  .qm-error {
+    font-size: 13px; font-weight: 600; color: #b3261e; background: #fdecea;
+    border: 1px solid #f5c6c2; border-radius: 8px; padding: 10px 14px; margin-bottom: 16px;
+  }
+
+  .qm-flow-grid { display: grid; gap: 14px; }
+  .qm-flow-card {
+    text-align: left; width: 100%; background: var(--off-white); border: 1.5px solid var(--line);
+    border-radius: 14px; padding: 22px 22px; cursor: pointer; transition: border-color 0.2s, background 0.2s, transform 0.15s;
+    display: flex; flex-direction: column; gap: 6px; font-family: var(--font);
+  }
+  .qm-flow-card:hover { border-color: var(--orange); transform: translateY(-2px); }
+  .qm-flow-card.selected { border-color: var(--orange-deep); background: var(--orange-tint); }
+  .qm-flow-card-title { font-size: 16.5px; font-weight: 800; color: var(--graphite-900); }
+  .qm-flow-card-text { font-size: 13.5px; color: var(--graphite-500); line-height: 1.55; }
+
+  .qm-chip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  @media(max-width:480px){ .qm-chip-grid { grid-template-columns: 1fr; } }
+  .qm-chip-grid.qm-chip-grid-1col { grid-template-columns: 1fr; }
+  .qm-chip {
+    display: flex; flex-direction: column; gap: 3px; text-align: left;
+    background: var(--off-white); border: 1.5px solid var(--line); border-radius: 10px;
+    padding: 13px 16px; font-family: var(--font); cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    font-size: 14px; font-weight: 700; color: var(--graphite-800);
+  }
+  .qm-chip:hover { border-color: var(--orange); }
+  .qm-chip.selected { border-color: var(--orange-deep); background: var(--orange-tint); color: var(--orange-deep); }
+  .qm-chip-sub { font-size: 12px; font-weight: 500; color: var(--graphite-500); }
+  .qm-chip.selected .qm-chip-sub { color: var(--orange-deep); opacity: 0.8; }
+
+  .qm-state-selected { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+  .qm-state-tag {
+    display: inline-flex; align-items: center; gap: 4px; background: var(--orange-tint);
+    color: var(--orange-deep); border: 1px solid var(--orange-tint-2); border-radius: 20px;
+    padding: 7px 6px 7px 14px; font-size: 13px; font-weight: 700;
+  }
+  .qm-state-tag button { background: none; border: none; color: var(--orange-deep); cursor: pointer; font-size: 15px; line-height: 1; padding: 2px 6px; }
+  .qm-state-search {
+    width: 100%; background: var(--off-white); border: 1.5px solid var(--line); border-radius: 8px;
+    padding: 12px 14px; font-family: var(--font); font-size: 14px; outline: none; margin-bottom: 12px;
+    transition: border-color 0.2s;
+  }
+  .qm-state-search:focus { border-color: var(--orange); }
+  .qm-state-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; max-height: 230px; overflow-y: auto; padding-right: 2px; }
+  @media(max-width:480px){ .qm-state-grid { grid-template-columns: 1fr 1fr; } }
+  .qm-state-btn {
+    background: var(--off-white); border: 1.5px solid var(--line); border-radius: 8px;
+    padding: 10px 8px; font-family: var(--font); font-size: 13px; font-weight: 600;
+    color: var(--graphite-800); cursor: pointer; text-align: left; transition: border-color 0.2s, background 0.2s;
+  }
+  .qm-state-btn:hover { border-color: var(--orange); }
+  .qm-state-btn.selected { border-color: var(--orange-deep); background: var(--orange-tint); color: var(--orange-deep); }
+  .qm-state-empty { font-size: 13px; color: var(--graphite-500); padding: 12px 2px; }
+
+  .qm-field-note { font-size: 12px; color: var(--graphite-500); margin-top: 10px; }
+  .qm-conditional { margin-top: 14px; }
+
+  .qm-summary { display: flex; flex-direction: column; gap: 0; }
+  .qm-summary-item {
+    display: flex; justify-content: space-between; gap: 16px; align-items: flex-start;
+    padding: 14px 0; border-bottom: 1px solid var(--line);
+  }
+  .qm-summary-item:last-child { border-bottom: none; }
+  .qm-summary-label { font-size: 11.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--graphite-500); flex-shrink: 0; width: 120px; }
+  .qm-summary-value { font-size: 14px; font-weight: 600; color: var(--graphite-900); text-align: right; flex: 1; }
+  .qm-summary-edit { font-size: 12px; font-weight: 700; color: var(--orange-deep); background: none; border: none; cursor: pointer; text-decoration: underline; flex-shrink: 0; }
+  .qm-summary-done { text-align: center; padding: 20px 0 4px; }
+  .qm-summary-done-title { font-size: 15px; font-weight: 800; color: var(--graphite-900); }
+  .qm-summary-done-sub { font-size: 13px; color: var(--graphite-500); margin-top: 4px; }
+
+  .qm-footer {
+    padding: 20px 32px; border-top: 1px solid var(--line); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    background: var(--white); position: sticky; bottom: 0;
+  }
+  @media(max-width:640px){ .qm-footer { padding: 16px 22px; } }
+  .qm-footer #qmNext { flex: 1; justify-content: center; }
+  .qm-btn-back {
+    background: none; border: none; color: var(--graphite-700); font-weight: 700; font-size: 14px;
+    cursor: pointer; padding: 15px 6px; display: flex; align-items: center; gap: 6px; flex-shrink: 0;
+    font-family: var(--font);
+  }
+  .qm-btn-back:hover { color: var(--orange-deep); }
 </style>
 </head>
 <body>
@@ -487,7 +614,7 @@
       <li><a href="#facilities">Facilities</a></li>
       <li><a href="#how">Como Funciona</a></li>
       <li><a href="#segments">Segmentos</a></li>
-      <li><a href="#contact" class="nav-cta">Solicitar Proposta</a></li>
+      <li><a href="#contact" class="nav-cta" onclick="openQuoteModal(event)">Solicitar Proposta</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
@@ -504,7 +631,7 @@
   <a href="#solutions" onclick="toggleMenu()">Soluções</a>
   <a href="#how" onclick="toggleMenu()">Como Funciona</a>
   <a href="#segments" onclick="toggleMenu()">Segmentos</a>
-  <a href="#contact" onclick="toggleMenu()" class="mobile-cta">Solicitar Proposta</a>
+  <a href="#contact" onclick="toggleMenu(); openQuoteModal(event);" class="mobile-cta">Solicitar Proposta</a>
 </div>
 
 <main id="main">
@@ -518,7 +645,7 @@
         <h1 class="hero-title">A operação da sua empresa, <em>sob gestão profissional.</em></h1>
         <p class="hero-desc">A FGL Brasil estrutura equipes, processos e serviços operacionais para empresas que precisam de eficiência, organização e um parceiro que realmente assume a responsabilidade da operação.</p>
         <div class="hero-btns">
-          <a href="#contact" class="btn btn-primary">Solicitar Proposta</a>
+          <a href="#contact" class="btn btn-primary" onclick="openQuoteModal(event)">Solicitar Proposta</a>
           <a href="#services" class="btn btn-outline">Conhecer Nossos Serviços</a>
         </div>
         <div class="hero-pillars">
@@ -641,42 +768,42 @@
         <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M9 13h1M14 9h1M14 13h1M9 21v-4h6v4"/></svg></div>
         <h3 class="service-title">Portaria e Recepção</h3>
         <p class="service-text">Recepção, controle administrativo de fluxo e atendimento organizado para colaboradores, visitantes e prestadores de serviço.</p>
-        <a href="#contact" class="service-link">Solicitar Avaliação →</a>
+        <a href="#contact" class="service-link" onclick="openQuoteModal(event, 'labor')">Solicitar Avaliação →</a>
       </div>
       <div class="service-card reveal">
         <span class="service-num">02</span>
         <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M3 6l3 1 5 12 8-14"/><path d="M9 19h9"/></svg></div>
         <h3 class="service-title">Limpeza e Conservação</h3>
         <p class="service-text">Equipes especializadas em limpeza e conservação de ambientes corporativos, industriais e áreas comuns.</p>
-        <a href="#contact" class="service-link">Solicitar Avaliação →</a>
+        <a href="#contact" class="service-link" onclick="openQuoteModal(event, 'labor')">Solicitar Avaliação →</a>
       </div>
       <div class="service-card reveal">
         <span class="service-num">03</span>
         <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.1-3.1a4 4 0 01-5.4 5.4L6 20.9 3.1 18l9.4-9.4A4 4 0 0117.9 3.2z"/></svg></div>
         <h3 class="service-title">Manutenção Predial</h3>
         <p class="service-text">Manutenção preventiva e corretiva de instalações, estruturas e sistemas prediais para operação contínua.</p>
-        <a href="#contact" class="service-link">Solicitar Avaliação →</a>
+        <a href="#contact" class="service-link" onclick="openQuoteModal(event, 'labor')">Solicitar Avaliação →</a>
       </div>
       <div class="service-card reveal">
         <span class="service-num">04</span>
         <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
         <h3 class="service-title">Jardinagem e Paisagismo</h3>
         <p class="service-text">Manutenção de áreas verdes, paisagismo e conservação de espaços externos com padrão consistente.</p>
-        <a href="#contact" class="service-link">Solicitar Avaliação →</a>
+        <a href="#contact" class="service-link" onclick="openQuoteModal(event, 'labor')">Solicitar Avaliação →</a>
       </div>
       <div class="service-card reveal">
         <span class="service-num">05</span>
         <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
         <h3 class="service-title">Apoio Administrativo e Operacional</h3>
         <p class="service-text">Mão de obra para funções de apoio administrativo, logística interna e rotinas operacionais.</p>
-        <a href="#contact" class="service-link">Solicitar Avaliação →</a>
+        <a href="#contact" class="service-link" onclick="openQuoteModal(event, 'labor')">Solicitar Avaliação →</a>
       </div>
       <div class="service-card reveal">
         <span class="service-num">06</span>
         <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a5 5 0 015-5h4a5 5 0 015 5v2"/><path d="M17 11a4 4 0 000-8M23 21v-2a5 5 0 00-4-4.9"/></svg></div>
         <h3 class="service-title">Gestão de Equipes Terceirizadas</h3>
         <p class="service-text">Recrutamento, escala, supervisão e substituição de profissionais, com conformidade trabalhista.</p>
-        <a href="#contact" class="service-link">Solicitar Avaliação →</a>
+        <a href="#contact" class="service-link" onclick="openQuoteModal(event, 'labor')">Solicitar Avaliação →</a>
       </div>
     </div>
   </div>
@@ -699,7 +826,7 @@
       <div class="reveal facilities-note">
         <div class="facilities-note-title">Facilities sob medida para sua operação</div>
         <p class="facilities-note-text">Cada empresa tem uma estrutura diferente. Montamos um plano de facilities alinhado ao porte, ao segmento e às necessidades reais da sua operação.</p>
-        <a href="#contact" class="btn btn-primary">Solicitar Proposta</a>
+        <a href="#contact" class="btn btn-primary" onclick="openQuoteModal(event)">Solicitar Proposta</a>
       </div>
     </div>
   </div>
@@ -1029,6 +1156,27 @@
   </svg>
 </a>
 
+<!-- QUOTE MODAL -->
+<div class="qm-overlay" id="qmOverlay">
+  <div class="qm-modal" id="qmModal" role="dialog" aria-modal="true" aria-labelledby="qmTitle" aria-describedby="qmDesc">
+    <div class="qm-header">
+      <button type="button" class="qm-close" id="qmClose" aria-label="Fechar">&times;</button>
+      <div class="qm-kicker">Solicitação de cotação</div>
+      <h2 class="qm-title" id="qmTitle">Como podemos ajudar sua empresa?</h2>
+      <p class="qm-desc" id="qmDesc">Leva menos de 2 minutos.</p>
+      <div class="qm-progress" id="qmProgress" hidden>
+        <div class="qm-progress-track"><div class="qm-progress-fill" id="qmProgressFill" style="width:0%"></div></div>
+        <div class="qm-progress-label" id="qmProgressLabel"></div>
+      </div>
+    </div>
+    <div class="qm-body" id="qmBody"></div>
+    <div class="qm-footer" id="qmFooter">
+      <button type="button" class="qm-btn-back" id="qmBack" hidden>&larr; Voltar</button>
+      <button type="button" class="btn btn-primary" id="qmNext">Continuar</button>
+    </div>
+  </div>
+</div>
+
 <script>
 // ─── NAVBAR SCROLL ─────────────────────────────────────────
 var navbar = document.getElementById('navbar');
@@ -1082,6 +1230,681 @@ window.addEventListener('scroll', function() {
     a.classList.toggle('active', a.getAttribute('href') === '#' + current);
   });
 }, { passive: true });
+
+// ─── QUOTE MODAL: DATA ──────────────────────────────────────
+var QM_STATES = [
+  {code:'AC',name:'Acre'},{code:'AL',name:'Alagoas'},{code:'AP',name:'Amapá'},{code:'AM',name:'Amazonas'},
+  {code:'BA',name:'Bahia'},{code:'CE',name:'Ceará'},{code:'DF',name:'Distrito Federal'},{code:'ES',name:'Espírito Santo'},
+  {code:'GO',name:'Goiás'},{code:'MA',name:'Maranhão'},{code:'MT',name:'Mato Grosso'},{code:'MS',name:'Mato Grosso do Sul'},
+  {code:'MG',name:'Minas Gerais'},{code:'PA',name:'Pará'},{code:'PB',name:'Paraíba'},{code:'PR',name:'Paraná'},
+  {code:'PE',name:'Pernambuco'},{code:'PI',name:'Piauí'},{code:'RJ',name:'Rio de Janeiro'},{code:'RN',name:'Rio Grande do Norte'},
+  {code:'RS',name:'Rio Grande do Sul'},{code:'RO',name:'Rondônia'},{code:'RR',name:'Roraima'},{code:'SC',name:'Santa Catarina'},
+  {code:'SP',name:'São Paulo'},{code:'SE',name:'Sergipe'},{code:'TO',name:'Tocantins'}
+];
+
+var QM_LABOR_TYPES = ['Auxiliar de Limpeza','Controlador de Acesso','Fiscal de Piso','Jardineiro','Operador Logístico','Auxiliar Administrativo','Recepcionista','Auxiliar Operacional','Manutenção Predial','Outro'];
+
+var QM_QUANTITY_LABOR = [
+  {id:'1-5', label:'1 — 5 profissionais'},
+  {id:'5-15', label:'5 — 15 profissionais'},
+  {id:'15-40', label:'15 — 40 profissionais'},
+  {id:'50+', label:'+50 profissionais'},
+  {id:'unknown', label:'Ainda não sabemos', sub:'Podemos ajudar a dimensionar sua necessidade.'}
+];
+
+var QM_EQUIPMENT_TYPES = ['Viatura','Carro','SUV','Caminhonete','Van','Caminhão','Equipamento operacional','Equipamento de apoio','Outro','Ainda não tenho certeza'];
+
+var QM_RENTAL_PERIODS = [
+  {id:'7d', label:'Até 7 dias'},
+  {id:'8-30d', label:'8 — 30 dias'},
+  {id:'1-3m', label:'1 — 3 meses'},
+  {id:'3-6m', label:'3 — 6 meses'},
+  {id:'6-12m', label:'6 — 12 meses'},
+  {id:'12m+', label:'Mais de 12 meses'},
+  {id:'unknown', label:'Ainda não sabemos'}
+];
+
+var QM_RENTAL_QUANTITIES = [
+  {id:'1', label:'1'},
+  {id:'2-5', label:'2 — 5'},
+  {id:'6-10', label:'6 — 10'},
+  {id:'11-20', label:'11 — 20'},
+  {id:'20+', label:'+20'},
+  {id:'unknown', label:'Ainda não sabemos'}
+];
+
+// ─── QUOTE MODAL: STATE ─────────────────────────────────────
+var qmFlow = null;
+var qmStepIndex = 0;
+var qmAnswers = {};
+var qmLastFocused = null;
+var qmStateSearch = '';
+
+function qmResetAnswers() {
+  qmAnswers = {
+    states: [], quantity: '', laborTypes: [], laborOther: '',
+    rentalItems: [], rentalOther: '', city: '', period: '', rentalQuantity: '',
+    specs: '', company: '', contactName: '', phone: '', email: '', details: ''
+  };
+}
+qmResetAnswers();
+
+// ─── QUOTE MODAL: SHARED FIELD HELPER ───────────────────────
+function qmField(id, type, labelText, placeholder, value, onInput) {
+  var group = document.createElement('div');
+  group.className = 'form-group';
+  var label = document.createElement('label');
+  label.className = 'form-label'; label.setAttribute('for', id); label.textContent = labelText;
+  var input = document.createElement('input');
+  input.type = type; input.id = id; input.className = 'form-input'; input.placeholder = placeholder; input.value = value;
+  input.addEventListener('input', function(){ onInput(input.value); });
+  group.appendChild(label); group.appendChild(input);
+  return group;
+}
+
+function qmFormatPhoneBR(raw) {
+  var d = raw.replace(/\D/g,'').slice(0,11);
+  if (d.length <= 2) return d.length ? '(' + d : '';
+  if (d.length <= 6) return '(' + d.slice(0,2) + ') ' + d.slice(2);
+  if (d.length <= 10) return '(' + d.slice(0,2) + ') ' + d.slice(2,6) + '-' + d.slice(6);
+  return '(' + d.slice(0,2) + ') ' + d.slice(2,7) + '-' + d.slice(7);
+}
+
+// ─── QUOTE MODAL: REUSABLE CHIP GROUP ───────────────────────
+function qmRenderChipGroup(body, items, isSelectedFn, onToggleFn, oneCol) {
+  var grid = document.createElement('div');
+  grid.className = 'qm-chip-grid' + (oneCol ? ' qm-chip-grid-1col' : '');
+  items.forEach(function(item) {
+    var id = typeof item === 'string' ? item : item.id;
+    var label = typeof item === 'string' ? item : item.label;
+    var sub = (typeof item === 'object' && item.sub) ? item.sub : null;
+    var selected = isSelectedFn(id);
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'qm-chip' + (selected ? ' selected' : '');
+    btn.setAttribute('aria-pressed', selected ? 'true' : 'false');
+    btn.innerHTML = '<span>' + label + '</span>' + (sub ? '<span class="qm-chip-sub">' + sub + '</span>' : '');
+    btn.addEventListener('click', function() { onToggleFn(id); qmRenderStep(); });
+    grid.appendChild(btn);
+  });
+  body.appendChild(grid);
+}
+
+// ─── QUOTE MODAL: STATE SELECTOR ────────────────────────────
+function qmStateNames(codes) {
+  return codes.map(function(c){
+    var s = QM_STATES.filter(function(x){ return x.code === c; })[0];
+    return s ? s.code : c;
+  }).join(', ');
+}
+
+function qmRenderStateSelector(body) {
+  var wrap = document.createElement('div');
+
+  var chipsRow = document.createElement('div');
+  chipsRow.className = 'qm-state-selected';
+  qmAnswers.states.forEach(function(code) {
+    var st = QM_STATES.filter(function(s){ return s.code === code; })[0];
+    if (!st) return;
+    var tag = document.createElement('span');
+    tag.className = 'qm-state-tag';
+    var label = document.createElement('span');
+    label.textContent = st.code;
+    var btnRemove = document.createElement('button');
+    btnRemove.type = 'button';
+    btnRemove.setAttribute('aria-label', 'Remover ' + st.name);
+    btnRemove.textContent = '\u00d7';
+    btnRemove.addEventListener('click', function() {
+      qmAnswers.states = qmAnswers.states.filter(function(c){ return c !== code; });
+      qmRenderStep();
+    });
+    tag.appendChild(label);
+    tag.appendChild(btnRemove);
+    chipsRow.appendChild(tag);
+  });
+  wrap.appendChild(chipsRow);
+
+  var search = document.createElement('input');
+  search.type = 'text';
+  search.className = 'qm-state-search';
+  search.placeholder = 'Buscar estado...';
+  search.value = qmStateSearch;
+  search.setAttribute('aria-label', 'Buscar estado');
+  wrap.appendChild(search);
+
+  var grid = document.createElement('div');
+  grid.className = 'qm-state-grid';
+  wrap.appendChild(grid);
+
+  function renderGrid() {
+    grid.innerHTML = '';
+    var q = qmStateSearch.trim().toLowerCase();
+    var list = QM_STATES.filter(function(s) {
+      return !q || s.name.toLowerCase().indexOf(q) !== -1 || s.code.toLowerCase().indexOf(q) !== -1;
+    });
+    if (!list.length) {
+      var empty = document.createElement('div');
+      empty.className = 'qm-state-empty';
+      empty.textContent = 'Nenhum estado encontrado.';
+      grid.appendChild(empty);
+      return;
+    }
+    list.forEach(function(s) {
+      var selected = qmAnswers.states.indexOf(s.code) !== -1;
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'qm-state-btn' + (selected ? ' selected' : '');
+      btn.setAttribute('aria-pressed', selected ? 'true' : 'false');
+      btn.textContent = s.code + ' \u2014 ' + s.name;
+      btn.addEventListener('click', function() {
+        var idx = qmAnswers.states.indexOf(s.code);
+        if (idx === -1) qmAnswers.states.push(s.code); else qmAnswers.states.splice(idx, 1);
+        qmRenderStep();
+      });
+      grid.appendChild(btn);
+    });
+  }
+  search.addEventListener('input', function() {
+    qmStateSearch = search.value;
+    renderGrid();
+  });
+  renderGrid();
+  body.appendChild(wrap);
+}
+
+// ─── QUOTE MODAL: STEP DEFINITIONS ──────────────────────────
+function qmStepFlowSelect() {
+  return {
+    title: 'Como podemos ajudar sua empresa?',
+    desc: 'Leva menos de 2 minutos.',
+    progress: false,
+    render: function(body) {
+      var wrap = document.createElement('div');
+      wrap.className = 'qm-flow-grid';
+      var options = [
+        {id:'labor', title:'Terceirização de Mão de Obra', text:'Estruture sua operação com equipes terceirizadas, gestão e supervisão da FGL.'},
+        {id:'rental', title:'Aluguel de Viaturas, Veículos e Equipamentos', text:'Consulte disponibilidade de veículos, viaturas e equipamentos para sua operação.'}
+      ];
+      options.forEach(function(opt) {
+        var card = document.createElement('button');
+        card.type = 'button';
+        card.className = 'qm-flow-card' + (qmFlow === opt.id ? ' selected' : '');
+        card.setAttribute('aria-pressed', qmFlow === opt.id ? 'true' : 'false');
+        card.innerHTML = '<span class="qm-flow-card-title">' + opt.title + '</span><span class="qm-flow-card-text">' + opt.text + '</span>';
+        card.addEventListener('click', function() {
+          qmFlow = opt.id;
+          qmRenderStep();
+        });
+        wrap.appendChild(card);
+      });
+      body.appendChild(wrap);
+    },
+    validate: function() {
+      if (!qmFlow) return { valid:false, message:'Selecione uma opção para continuar.' };
+      return { valid:true };
+    }
+  };
+}
+
+function qmStepStates(opts) {
+  return {
+    title: opts.title, desc: opts.desc, progress: true,
+    render: function(body) {
+      qmRenderStateSelector(body);
+      if (opts.withCity) {
+        var group = qmField('qmCity2','text','Cidade / Município','Ex.: São Paulo, Barueri e Jandira (opcional)', qmAnswers.city, function(v){ qmAnswers.city = v; });
+        group.classList.add('qm-conditional');
+        body.appendChild(group);
+      }
+    },
+    validate: function() {
+      if (!qmAnswers.states.length) return { valid:false, message:'Selecione pelo menos um estado para continuar.' };
+      return { valid:true };
+    }
+  };
+}
+
+function qmStepQuantityLabor() {
+  return {
+    title: 'Quantos profissionais terceirizados sua empresa precisa?', desc: '', progress: true,
+    render: function(body) {
+      qmRenderChipGroup(body, QM_QUANTITY_LABOR,
+        function(id){ return qmAnswers.quantity === id; },
+        function(id){ qmAnswers.quantity = id; }, true);
+    },
+    validate: function(){ if(!qmAnswers.quantity) return {valid:false,message:'Selecione uma opção para continuar.'}; return {valid:true}; }
+  };
+}
+
+function qmStepLaborTypes() {
+  return {
+    title: 'Que tipo de profissionais você precisa?',
+    desc: 'Selecione quantas opções forem necessárias.',
+    progress: true,
+    render: function(body) {
+      qmRenderChipGroup(body, QM_LABOR_TYPES,
+        function(id){ return qmAnswers.laborTypes.indexOf(id) !== -1; },
+        function(id){
+          var i = qmAnswers.laborTypes.indexOf(id);
+          if (i === -1) qmAnswers.laborTypes.push(id); else qmAnswers.laborTypes.splice(i,1);
+        }, false);
+      if (qmAnswers.laborTypes.indexOf('Outro') !== -1) {
+        var group = qmField('qmLaborOther','text','Qual profissional ou função você precisa?','Descreva a função', qmAnswers.laborOther, function(v){ qmAnswers.laborOther = v; });
+        group.classList.add('qm-conditional');
+        body.appendChild(group);
+      }
+    },
+    validate: function() {
+      if (!qmAnswers.laborTypes.length) return { valid:false, message:'Selecione ao menos um tipo de profissional para continuar.' };
+      return { valid:true };
+    }
+  };
+}
+
+function qmStepRentalItems() {
+  return {
+    title: 'O que você precisa alugar?', desc: 'Selecione quantas opções forem necessárias.', progress: true,
+    render: function(body) {
+      qmRenderChipGroup(body, QM_EQUIPMENT_TYPES,
+        function(id){ return qmAnswers.rentalItems.indexOf(id) !== -1; },
+        function(id){ var i=qmAnswers.rentalItems.indexOf(id); if(i===-1) qmAnswers.rentalItems.push(id); else qmAnswers.rentalItems.splice(i,1); }, false);
+      if (qmAnswers.rentalItems.indexOf('Outro') !== -1) {
+        var group = qmField('qmRentalOther','text','Qual item você precisa?','Descreva o veículo ou equipamento', qmAnswers.rentalOther, function(v){ qmAnswers.rentalOther = v; });
+        group.classList.add('qm-conditional');
+        body.appendChild(group);
+      }
+    },
+    validate: function(){ if(!qmAnswers.rentalItems.length) return {valid:false,message:'Selecione pelo menos uma opção para continuar.'}; return {valid:true}; }
+  };
+}
+
+function qmStepRentalPeriod() {
+  return {
+    title: 'Por quanto tempo você precisa?', desc: '', progress: true,
+    render: function(body) {
+      qmRenderChipGroup(body, QM_RENTAL_PERIODS,
+        function(id){ return qmAnswers.period === id; },
+        function(id){ qmAnswers.period = id; }, true);
+    },
+    validate: function(){ if(!qmAnswers.period) return {valid:false,message:'Selecione uma opção para continuar.'}; return {valid:true}; }
+  };
+}
+
+function qmStepRentalQuantity() {
+  return {
+    title: 'Quantas unidades você precisa?', desc: '', progress: true,
+    render: function(body) {
+      qmRenderChipGroup(body, QM_RENTAL_QUANTITIES,
+        function(id){ return qmAnswers.rentalQuantity === id; },
+        function(id){ qmAnswers.rentalQuantity = id; }, true);
+    },
+    validate: function(){ if(!qmAnswers.rentalQuantity) return {valid:false,message:'Selecione uma opção para continuar.'}; return {valid:true}; }
+  };
+}
+
+function qmStepTextarea(opts) {
+  return {
+    title: opts.title, desc: opts.desc, progress: true,
+    render: function(body) {
+      var group = document.createElement('div');
+      group.className = 'form-group';
+      var label = document.createElement('label');
+      label.className = 'form-label'; label.setAttribute('for','qmTextarea'); label.textContent = opts.label;
+      group.appendChild(label);
+      var ta = document.createElement('textarea');
+      ta.id = 'qmTextarea'; ta.className = 'form-textarea'; ta.placeholder = opts.placeholder;
+      ta.value = qmAnswers[opts.field];
+      ta.addEventListener('input', function(){ qmAnswers[opts.field] = ta.value; });
+      group.appendChild(ta);
+      body.appendChild(group);
+      if (opts.note) {
+        var note = document.createElement('p');
+        note.className = 'qm-field-note';
+        note.textContent = opts.note;
+        body.appendChild(note);
+      }
+    },
+    validate: function(){ return { valid:true }; }
+  };
+}
+
+function qmStepCompanyInfo(flow) {
+  return {
+    title: 'Agora, conte um pouco sobre sua empresa',
+    desc: 'Precisamos desses dados para preparar sua cotação.',
+    progress: true,
+    render: function(body) {
+      body.appendChild(qmField('qmCompany','text','Nome da empresa *','Razão social ou nome fantasia', qmAnswers.company, function(v){ qmAnswers.company = v; }));
+      body.appendChild(qmField('qmContactName','text','Nome do responsável *','Seu nome completo', qmAnswers.contactName, function(v){ qmAnswers.contactName = v; }));
+      var phoneField = qmField('qmPhone','tel','Telefone / WhatsApp *','(11) 97831-6351', qmAnswers.phone, function(v){ qmAnswers.phone = v; });
+      body.appendChild(phoneField);
+      var phoneInput = phoneField.querySelector('input');
+      phoneInput.addEventListener('input', function() {
+        var formatted = qmFormatPhoneBR(phoneInput.value);
+        phoneInput.value = formatted;
+        qmAnswers.phone = formatted;
+      });
+      body.appendChild(qmField('qmEmail','email','E-mail','seu@email.com (opcional)', qmAnswers.email, function(v){ qmAnswers.email = v; }));
+      if (flow === 'labor') {
+        body.appendChild(qmField('qmCity','text','Cidade / Município','Ex.: São Paulo, Barueri e Jandira (opcional)', qmAnswers.city, function(v){ qmAnswers.city = v; }));
+      }
+    },
+    validate: function() {
+      if (!qmAnswers.company.trim()) return { valid:false, message:'Informe o nome da empresa.' };
+      if (!qmAnswers.contactName.trim()) return { valid:false, message:'Informe o nome do responsável.' };
+      var digits = qmAnswers.phone.replace(/\D/g,'');
+      if (digits.length < 10 || digits.length > 11) return { valid:false, message:'Informe um telefone válido com DDD.' };
+      if (qmAnswers.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(qmAnswers.email.trim())) return { valid:false, message:'Informe um e-mail válido ou deixe em branco.' };
+      return { valid:true };
+    }
+  };
+}
+
+function qmSummaryRow(body, label, value, stepIndex) {
+  if (!value) return;
+  var row = document.createElement('div');
+  row.className = 'qm-summary-item';
+  var l = document.createElement('div'); l.className='qm-summary-label'; l.textContent = label;
+  var v = document.createElement('div'); v.className='qm-summary-value'; v.textContent = value;
+  var editBtn = document.createElement('button'); editBtn.type='button'; editBtn.className='qm-summary-edit'; editBtn.textContent='Editar';
+  editBtn.addEventListener('click', function(){ qmStepIndex = stepIndex; qmRenderStep(); });
+  row.appendChild(l); row.appendChild(v); row.appendChild(editBtn);
+  body.appendChild(row);
+}
+
+function qmSummaryDone(body) {
+  var done = document.createElement('div'); done.className='qm-summary-done';
+  var t = document.createElement('div'); t.className='qm-summary-done-title'; t.textContent = 'Tudo certo. Sua solicitação está pronta.';
+  var s = document.createElement('div'); s.className='qm-summary-done-sub'; s.textContent = 'Clique abaixo para abrir o WhatsApp com a mensagem preenchida.';
+  done.appendChild(t); done.appendChild(s);
+  body.appendChild(done);
+}
+
+function qmStepSummaryLabor() {
+  return {
+    title: 'Confira sua solicitação', desc: 'Revise antes de enviar pelo WhatsApp.', progress: true,
+    render: function(body) {
+      var box = document.createElement('div'); box.className='qm-summary';
+      qmSummaryRow(box, 'Tipo de serviço', 'Terceirização de Mão de Obra', 0);
+      qmSummaryRow(box, 'Estados', qmStateNames(qmAnswers.states), 1);
+      var qtyLabel = (QM_QUANTITY_LABOR.filter(function(q){return q.id===qmAnswers.quantity;})[0]||{}).label;
+      qmSummaryRow(box, 'Quantidade', qtyLabel, 2);
+      var types = qmAnswers.laborTypes.slice();
+      var otherIdx = types.indexOf('Outro');
+      if (otherIdx !== -1 && qmAnswers.laborOther) types[otherIdx] = 'Outro (' + qmAnswers.laborOther + ')';
+      qmSummaryRow(box, 'Profissionais', types.join(', '), 3);
+      qmSummaryRow(box, 'Empresa', qmAnswers.company, 4);
+      qmSummaryRow(box, 'Responsável', qmAnswers.contactName, 4);
+      qmSummaryRow(box, 'Telefone', qmAnswers.phone, 4);
+      qmSummaryRow(box, 'E-mail', qmAnswers.email, 4);
+      qmSummaryRow(box, 'Cidade(s)', qmAnswers.city, 4);
+      qmSummaryRow(box, 'Observações', qmAnswers.details, 5);
+      body.appendChild(box);
+      qmSummaryDone(body);
+    },
+    validate: function(){ return { valid:true }; },
+    isFinal: true
+  };
+}
+
+function qmStepSummaryRental() {
+  return {
+    title: 'Confira sua solicitação', desc: 'Revise antes de enviar pelo WhatsApp.', progress: true,
+    render: function(body) {
+      var box = document.createElement('div'); box.className='qm-summary';
+      qmSummaryRow(box, 'Tipo', 'Aluguel de Viaturas, Veículos e Equipamentos', 0);
+      var items = qmAnswers.rentalItems.slice();
+      var otherIdx = items.indexOf('Outro');
+      if (otherIdx !== -1 && qmAnswers.rentalOther) items[otherIdx] = 'Outro (' + qmAnswers.rentalOther + ')';
+      qmSummaryRow(box, 'Itens', items.join(', '), 1);
+      qmSummaryRow(box, 'Estados', qmStateNames(qmAnswers.states), 2);
+      qmSummaryRow(box, 'Cidade(s)', qmAnswers.city, 2);
+      var periodLabel = (QM_RENTAL_PERIODS.filter(function(pp){return pp.id===qmAnswers.period;})[0]||{}).label;
+      qmSummaryRow(box, 'Período', periodLabel, 3);
+      var qtyLabel = (QM_RENTAL_QUANTITIES.filter(function(q){return q.id===qmAnswers.rentalQuantity;})[0]||{}).label;
+      qmSummaryRow(box, 'Quantidade', qtyLabel, 4);
+      qmSummaryRow(box, 'Especificações', qmAnswers.specs, 5);
+      qmSummaryRow(box, 'Empresa', qmAnswers.company, 6);
+      qmSummaryRow(box, 'Responsável', qmAnswers.contactName, 6);
+      qmSummaryRow(box, 'Telefone', qmAnswers.phone, 6);
+      qmSummaryRow(box, 'E-mail', qmAnswers.email, 6);
+      body.appendChild(box);
+      qmSummaryDone(body);
+    },
+    validate: function(){ return { valid:true }; },
+    isFinal: true
+  };
+}
+
+function qmGetSteps() {
+  if (qmFlow === 'labor') {
+    return [
+      qmStepFlowSelect(),
+      qmStepStates({title:'Onde sua operação está localizada?', desc:'Em quais estados você precisa da operação?'}),
+      qmStepQuantityLabor(),
+      qmStepLaborTypes(),
+      qmStepCompanyInfo('labor'),
+      qmStepTextarea({title:'Existe alguma informação importante sobre sua operação?', desc:'Isso nos ajuda a preparar uma cotação mais precisa.', field:'details', label:'Detalhes adicionais', placeholder:'Ex.: horário de funcionamento, início previsto, quantidade de postos, escala, particularidades da operação etc.', note:'Quanto mais detalhes você fornecer, mais precisa poderá ser nossa cotação.'}),
+      qmStepSummaryLabor()
+    ];
+  }
+  if (qmFlow === 'rental') {
+    return [
+      qmStepFlowSelect(),
+      qmStepRentalItems(),
+      qmStepStates({title:'Onde o veículo ou equipamento será utilizado?', desc:'Selecione os estados e, se quiser, a cidade.', withCity:true}),
+      qmStepRentalPeriod(),
+      qmStepRentalQuantity(),
+      qmStepTextarea({title:'Há alguma especificação importante?', desc:'Campo opcional.', field:'specs', label:'Especificações', placeholder:'Modelo específico, capacidade, tipo de veículo, necessidade de adaptação, finalidade de uso etc.'}),
+      qmStepCompanyInfo('rental'),
+      qmStepSummaryRental()
+    ];
+  }
+  return [ qmStepFlowSelect() ];
+}
+
+// ─── QUOTE MODAL: MESSAGE BUILDERS ──────────────────────────
+function qmAddLine(lines, label, value) {
+  if (value === undefined || value === null) return;
+  var v = String(value).trim();
+  if (!v) return;
+  lines.push(label ? (label + ': ' + v) : v);
+}
+
+function qmBuildLaborMessage() {
+  var a = qmAnswers;
+  var lines = [];
+  lines.push('Olá! Vim pelo site da FGL Brasil e gostaria de solicitar uma cotação.');
+  lines.push('');
+  lines.push('Solicitação de Terceirização de Mão de Obra');
+  lines.push('');
+  qmAddLine(lines, 'Empresa', a.company);
+  qmAddLine(lines, 'Responsável', a.contactName);
+  qmAddLine(lines, 'Telefone', a.phone);
+  qmAddLine(lines, 'E-mail', a.email);
+  qmAddLine(lines, 'Estados de interesse', qmStateNames(a.states));
+  var qtyLabel = (QM_QUANTITY_LABOR.filter(function(q){return q.id===a.quantity;})[0]||{}).label;
+  qmAddLine(lines, 'Quantidade estimada de profissionais', qtyLabel);
+  if (a.laborTypes.length) {
+    lines.push('');
+    lines.push('Profissionais necessários:');
+    a.laborTypes.forEach(function(t) {
+      if (t === 'Outro' && a.laborOther) lines.push('- Outro: ' + a.laborOther);
+      else lines.push('- ' + t);
+    });
+  }
+  if (a.city.trim()) { lines.push(''); qmAddLine(lines, 'Cidade(s)', a.city); }
+  if (a.details.trim()) {
+    lines.push('');
+    lines.push('Informações adicionais:');
+    lines.push(a.details.trim());
+  }
+  lines.push('');
+  lines.push('Gostaria de entender as possibilidades e receber uma proposta da FGL Brasil.');
+  return lines.join('\n');
+}
+
+function qmBuildRentalMessage() {
+  var a = qmAnswers;
+  var lines = [];
+  lines.push('Olá! Vim pelo site da FGL Brasil e gostaria de solicitar uma cotação.');
+  lines.push('');
+  lines.push('Solicitação de Aluguel de Viaturas, Veículos e Equipamentos');
+  lines.push('');
+  qmAddLine(lines, 'Empresa', a.company);
+  qmAddLine(lines, 'Responsável', a.contactName);
+  qmAddLine(lines, 'Telefone', a.phone);
+  qmAddLine(lines, 'E-mail', a.email);
+  if (a.rentalItems.length) {
+    lines.push('');
+    lines.push('Itens de interesse:');
+    a.rentalItems.forEach(function(t) {
+      if (t === 'Outro' && a.rentalOther) lines.push('- Outro: ' + a.rentalOther);
+      else lines.push('- ' + t);
+    });
+  }
+  lines.push('');
+  qmAddLine(lines, 'Estados', qmStateNames(a.states));
+  qmAddLine(lines, 'Cidade(s)', a.city);
+  var periodLabel = (QM_RENTAL_PERIODS.filter(function(pp){return pp.id===a.period;})[0]||{}).label;
+  qmAddLine(lines, 'Período estimado', periodLabel);
+  var qtyLabel = (QM_RENTAL_QUANTITIES.filter(function(q){return q.id===a.rentalQuantity;})[0]||{}).label;
+  qmAddLine(lines, 'Quantidade', qtyLabel);
+  if (a.specs.trim()) {
+    lines.push('');
+    lines.push('Especificações:');
+    lines.push(a.specs.trim());
+  }
+  lines.push('');
+  lines.push('Gostaria de receber informações sobre disponibilidade e valores.');
+  return lines.join('\n');
+}
+
+// ─── QUOTE MODAL: NAVIGATION / RENDER / INIT ────────────────
+var qmOverlayEl, qmBodyEl, qmTitleEl, qmDescEl, qmProgressEl, qmProgressFillEl, qmProgressLabelEl, qmBackBtn, qmNextBtn, qmCloseBtn, qmModalEl;
+
+function qmClearStepError() {
+  var err = document.getElementById('qmStepError');
+  if (err) err.remove();
+}
+
+function qmShowStepError(msg) {
+  qmClearStepError();
+  var err = document.createElement('div');
+  err.className = 'qm-error'; err.id = 'qmStepError'; err.setAttribute('aria-live','polite');
+  err.textContent = msg;
+  qmBodyEl.insertBefore(err, qmBodyEl.firstChild);
+}
+
+function qmRenderStep() {
+  var steps = qmGetSteps();
+  if (qmStepIndex >= steps.length) qmStepIndex = steps.length - 1;
+  var step = steps[qmStepIndex];
+
+  qmTitleEl.textContent = step.title;
+  qmDescEl.textContent = step.desc || '';
+  qmDescEl.hidden = !step.desc;
+
+  if (step.progress) {
+    qmProgressEl.hidden = false;
+    var pct = steps.length > 1 ? Math.round((qmStepIndex / (steps.length - 1)) * 100) : 0;
+    qmProgressFillEl.style.width = pct + '%';
+    qmProgressLabelEl.textContent = (qmStepIndex + 1) + ' de ' + steps.length;
+  } else {
+    qmProgressEl.hidden = true;
+  }
+
+  qmBodyEl.innerHTML = '';
+  var stepWrap = document.createElement('div');
+  stepWrap.className = 'qm-step';
+  step.render(stepWrap);
+  qmBodyEl.appendChild(stepWrap);
+  qmBodyEl.scrollTop = 0;
+
+  qmBackBtn.hidden = qmStepIndex === 0;
+  qmNextBtn.textContent = step.isFinal ? 'Solicitar Cotação pelo WhatsApp \u2192' : 'Continuar';
+}
+
+function qmPrevStep() {
+  qmClearStepError();
+  if (qmStepIndex === 0) return;
+  qmStepIndex--;
+  qmRenderStep();
+}
+
+function qmSubmitToWhatsApp() {
+  var msg = qmFlow === 'labor' ? qmBuildLaborMessage() : qmBuildRentalMessage();
+  var url = 'https://wa.me/5511978316351?text=' + encodeURIComponent(msg);
+  window.open(url, '_blank', 'noopener');
+}
+
+function qmNextStep() {
+  var steps = qmGetSteps();
+  var step = steps[qmStepIndex];
+  var result = step.validate ? step.validate() : { valid:true };
+  if (!result.valid) { qmShowStepError(result.message); return; }
+  qmClearStepError();
+  if (step.isFinal) {
+    qmSubmitToWhatsApp();
+    return;
+  }
+  qmStepIndex++;
+  qmRenderStep();
+}
+
+function qmTrapTab(e) {
+  var focusables = qmModalEl.querySelectorAll('button:not([disabled]), input:not([disabled]), textarea:not([disabled]), a[href]');
+  if (!focusables.length) return;
+  var first = focusables[0], last = focusables[focusables.length - 1];
+  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+}
+
+function openQuoteModal(e, presetFlow) {
+  if (e && e.preventDefault) e.preventDefault();
+  qmLastFocused = document.activeElement;
+  qmResetAnswers();
+  qmFlow = presetFlow || null;
+  qmStepIndex = presetFlow ? 1 : 0;
+  qmStateSearch = '';
+  document.body.style.overflow = 'hidden';
+  qmOverlayEl.classList.add('open');
+  qmRenderStep();
+  setTimeout(function() {
+    var focusable = qmModalEl.querySelector('button, input, textarea, a[href]');
+    if (focusable) focusable.focus();
+  }, 50);
+}
+
+function qmCloseModal() {
+  qmOverlayEl.classList.remove('open');
+  document.body.style.overflow = '';
+  if (qmLastFocused && qmLastFocused.focus) qmLastFocused.focus();
+}
+
+function qmInit() {
+  qmOverlayEl = document.getElementById('qmOverlay');
+  qmModalEl = document.getElementById('qmModal');
+  qmBodyEl = document.getElementById('qmBody');
+  qmTitleEl = document.getElementById('qmTitle');
+  qmDescEl = document.getElementById('qmDesc');
+  qmProgressEl = document.getElementById('qmProgress');
+  qmProgressFillEl = document.getElementById('qmProgressFill');
+  qmProgressLabelEl = document.getElementById('qmProgressLabel');
+  qmBackBtn = document.getElementById('qmBack');
+  qmNextBtn = document.getElementById('qmNext');
+  qmCloseBtn = document.getElementById('qmClose');
+
+  qmCloseBtn.addEventListener('click', qmCloseModal);
+  qmBackBtn.addEventListener('click', qmPrevStep);
+  qmNextBtn.addEventListener('click', qmNextStep);
+  document.addEventListener('keydown', function(e) {
+    if (!qmOverlayEl.classList.contains('open')) return;
+    if (e.key === 'Escape') { qmCloseModal(); return; }
+    if (e.key === 'Tab') qmTrapTab(e);
+  });
+}
+qmInit();
 </script>
 </body>
 </html>
