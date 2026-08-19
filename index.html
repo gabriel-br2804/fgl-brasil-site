@@ -1,911 +1,1084 @@
-<!-- deploy test 2026-08-19 -->
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head><script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Organization",
- "name": "FGL Brasil",
- "url": "https://fglbrasil.com",
- "logo": "https://fglbrasil.com/favicon.png"
-}
-</script>
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://www.fglbrasil.com/">
-<link rel="icon" type="image/png" sizes="512x512" href="https://fglbrasil.com/favicon.png">
-<link rel="shortcut icon" href="https://fglbrasil.com/favicon.png">
+<title>FGL Brasil | Terceirização de Mão de Obra e Facilities para Empresas</title>
+<meta name="description" content="A FGL Brasil estrutura equipes, processos e serviços operacionais para empresas: terceirização de mão de obra, facilities, portaria, limpeza, manutenção predial e gestão de equipes.">
+<meta name="keywords" content="terceirização de mão de obra, facilities, gestão de equipes terceirizadas, limpeza e conservação, manutenção predial, portaria e recepção, apoio administrativo, outsourcing empresarial">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="/">
+<meta property="og:site_name" content="FGL Brasil">
+<meta property="og:title" content="FGL Brasil | Terceirização de Mão de Obra e Facilities">
+<meta property="og:description" content="Estrutura, pessoas e processos para a operação da sua empresa. Conheça as soluções de terceirização e facilities da FGL Brasil.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="industria.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FGL Brasil | Terceirização de Mão de Obra e Facilities">
+<meta name="twitter:description" content="Estrutura, pessoas e processos para a operação da sua empresa.">
+<meta name="twitter:image" content="industria.jpg">
+<meta name="theme-color" content="#ffffff">
 
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231c1f24'/%3E%3Ctext x='32' y='42' font-family='Arial,Helvetica,sans-serif' font-weight='800' font-size='28' fill='%23f97316' text-anchor='middle'%3EFGL%3C/text%3E%3C/svg%3E">
 
-<title>FGL Brasil Terceirização | Portaria, Limpeza e Vigilância </title>
-<meta name="description" content="Empresa especializada em terceirização de portaria, limpeza, vigilância, controlador de acesso e serviços corporativos. Receba um orçamento personalizado em até 24h com análise e visita técnica ao local. FGL Brasil.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-
-
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "FGL Brasil",
+  "description": "Terceirização de mão de obra, facilities e serviços operacionais para empresas.",
+  "areaServed": "BR",
+  "email": "contato@fglbrasil.com.br"
+}
+</script>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-html{
-scroll-behavior:smooth;
-scroll-padding-top:90px;
-}
-body{background:#fff;color:#111;overflow-x:hidden}
+  :root {
+    --white: #ffffff;
+    --off-white: #f7f5f2;
+    --panel: #f1efea;
+    --graphite-900: #1c1f24;
+    --graphite-800: #2a2e35;
+    --graphite-700: #454b54;
+    --graphite-500: #5a6067;
+    --line: #e4e1da;
+    --line-strong: #d3cfc6;
+    --orange: #f97316;
+    --orange-deep: #b34d0a;
+    --orange-hover: #8a3d08;
+    --orange-tint: #fef1e6;
+    --orange-tint-2: #fce3cc;
+    --font: 'Manrope', 'Segoe UI', Arial, sans-serif;
+    --max: 1280px;
+  }
 
-/* NAV */
-   /* HEADER NOVO */
-header{
-position:fixed;
-top:0;
-width:100%;
-background:#ff6a00;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:16px 7%;
-z-index:999;
-}
+  * , *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+  }
+  body {
+    background: var(--white);
+    color: var(--graphite-900);
+    font-family: var(--font);
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  ::selection { background: var(--orange-deep); color: var(--white); }
 
-.logo-area{
-display:flex;
-align-items:center;
-gap:12px;
-}
+  .skip-link {
+    position: absolute; left: 12px; top: -60px; z-index: 2000;
+    background: var(--graphite-900); color: var(--white); padding: 12px 18px;
+    font-weight: 700; text-decoration: none; border-radius: 4px; transition: top 0.2s;
+  }
+  .skip-link:focus { top: 12px; }
 
-.logo-img{
-height:55px;
-}
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--orange); outline-offset: 2px;
+  }
 
-.logo-nome{
-font-family:'Montserrat',sans-serif;
-font-weight:800;
-font-size:20px;
-color:#fff;
-letter-spacing:1px;
-}
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 40px; }
+  @media(max-width:768px){ .container{ padding: 0 24px; } }
 
-/* MENU NORMAL PC */
-nav{
-display:flex;
-gap:35px;
-}
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 12px; font-weight: 700; letter-spacing: 2.5px;
+    color: var(--orange-deep); text-transform: uppercase; margin-bottom: 18px;
+  }
+  .eyebrow::before { content: ''; width: 22px; height: 2px; background: var(--orange); border-radius: 2px; }
 
-nav a{
-text-decoration:none;
-color:#fff;
-font-weight:500;
-font-family:'Montserrat',sans-serif;
-}
+  section { position: relative; }
+  .section-header { max-width: 640px; margin-bottom: 56px; }
+  .section-header.center { max-width: 680px; margin-left: auto; margin-right: auto; text-align: center; }
+  .section-title {
+    font-size: clamp(32px, 4.2vw, 48px);
+    font-weight: 800; line-height: 1.12; letter-spacing: -0.5px;
+  }
+  .section-title em { font-style: normal; color: var(--orange-deep); }
+  .section-body {
+    font-size: 16.5px; color: var(--graphite-700); max-width: 560px;
+    line-height: 1.75; margin-top: 18px;
+  }
+  .center .section-body { margin-left: auto; margin-right: auto; }
 
-/* BOTAO HAMBURGUER */
-.menu-toggle{
-display:none;
-font-size:28px;
-color:#fff;
-cursor:pointer;
-}
+  .btn {
+    font-size: 14px; font-weight: 700; letter-spacing: 0.3px;
+    padding: 15px 30px; border-radius: 6px; border: none; cursor: pointer;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+    transition: background 0.2s, color 0.2s, transform 0.15s, border-color 0.2s;
+  }
+  .btn-primary { background: var(--orange-deep); color: var(--white); }
+  .btn-primary:hover { background: var(--orange-hover); transform: translateY(-2px); }
+  .btn-dark { background: var(--graphite-900); color: var(--white); }
+  .btn-dark:hover { background: var(--graphite-800); transform: translateY(-2px); }
+  .btn-outline { background: transparent; color: var(--graphite-900); border: 1.5px solid var(--line-strong); }
+  .btn-outline:hover { border-color: var(--graphite-900); transform: translateY(-2px); }
+  .btn-outline.on-dark { color: var(--white); border-color: rgba(255,255,255,0.3); }
+  .btn-outline.on-dark:hover { border-color: var(--white); background: rgba(255,255,255,0.06); }
 
-/* MOBILE */
-@media(max-width:900px){
+  /* ─── REVEAL ─── */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
 
-.menu-toggle{
-display:block;
-}
+  /* ─── NAVIGATION ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+    background: rgba(255,255,255,0.88); backdrop-filter: blur(14px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  nav.scrolled { border-bottom-color: var(--line); box-shadow: 0 4px 20px rgba(28,31,36,0.05); }
+  .nav-inner {
+    max-width: var(--max); margin: 0 auto; padding: 0 40px;
+    display: flex; align-items: center; justify-content: space-between; height: 78px;
+  }
+  @media(max-width:768px){ .nav-inner { padding: 0 24px; height: 68px; } }
 
-nav{
-position:absolute;
-top:70px;
-right:0;
-background:#ff6a00;
-width:100%;
-flex-direction:column;
-align-items:center;
-gap:22px;
-padding:30px 0;
-display:none;
-box-shadow:0 25px 60px rgba(0,0,0,.25);
-}
+  .brand { display: flex; align-items: baseline; gap: 8px; text-decoration: none; }
+  .brand-mark {
+    font-size: 24px; font-weight: 800; letter-spacing: -0.5px; color: var(--graphite-900);
+  }
+  .brand-mark span { color: var(--orange-deep); }
+  .brand-sub {
+    font-size: 10px; font-weight: 700; letter-spacing: 3px; color: var(--graphite-500);
+    text-transform: uppercase;
+  }
+  @media(max-width:480px){ .brand-sub { display: none; } }
 
-nav a{
-font-size:20px;
-font-weight:700;
-letter-spacing:.3px;
-}
+  .nav-links { display: flex; align-items: center; gap: 34px; list-style: none; }
+  .nav-links a {
+    font-size: 14px; font-weight: 600; color: var(--graphite-700);
+    text-decoration: none; transition: color 0.2s; position: relative;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -6px; left: 0; right: 0; height: 2px;
+    background: var(--orange); border-radius: 2px; transform: scaleX(0); transition: transform 0.2s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--graphite-900); }
+  .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+  .nav-cta { background: var(--graphite-900); color: var(--white) !important; padding: 11px 20px; border-radius: 6px; }
+  .nav-cta:hover { background: var(--orange-deep); }
+  .nav-cta::after { display: none !important; }
 
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+  .nav-hamburger span { width: 24px; height: 2px; background: var(--graphite-900); border-radius: 2px; transition: 0.3s; }
+  @media(max-width:1024px){ .nav-links { display: none; } .nav-hamburger { display: flex; } }
 
-nav.active{
-display:flex;
-}
+  .mobile-menu {
+    display: none; position: fixed; inset: 0; z-index: 950;
+    background: var(--graphite-900);
+    flex-direction: column; padding: 90px 32px 40px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu-close {
+    position: absolute; top: 24px; right: 24px; background: none; border: none;
+    color: var(--white); font-size: 28px; cursor: pointer; line-height: 1; padding: 8px;
+  }
+  .mobile-menu a {
+    font-size: 24px; font-weight: 700; color: var(--white);
+    text-decoration: none; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .mobile-menu a.mobile-cta { color: var(--orange); }
 
-}
+  /* ─── HERO ─── */
+  #hero {
+    padding: 150px 0 90px; background: linear-gradient(180deg, var(--off-white) 0%, var(--white) 100%);
+    overflow: hidden;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 60px; align-items: center; }
+  @media(max-width:980px){ .hero-grid { grid-template-columns: 1fr; gap: 48px; } }
 
-/* HERO */
-.hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:0 20px;
-background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
-url("https://019c1003-6a1a-7232-95dd-d7c8f5c92897.mochausercontent.com/ChatGPT-Image-30-de-jan.-de-2026-16_53_06.png");
-background-size:cover;
-background-position:center;
-color:#fff;
-}
-.hero-content{max-width:900px}
-.hero h1{
-font-size:60px;
-font-weight:800;
-line-height:1.1;
-margin-bottom:20px;
-font-family:'Montserrat',sans-serif;
-letter-spacing:-1px;
-}
-.hero p{
-font-size:22px;
-opacity:.95;
-margin-bottom:35px;
-}
-.btn{
-display:inline-block;
-padding:18px 36px;
-border-radius:10px;
-background:#ff6a00;
-color:#fff;
-text-decoration:none;
-font-weight:600;
-margin:8px;
-transition:.3s;
-box-shadow:0 10px 30px rgba(255,106,0,.35);
-}
-.btn:hover{transform:translateY(-3px);opacity:.9}
+  .hero-title {
+    font-size: clamp(38px, 5.4vw, 64px); font-weight: 800; line-height: 1.08;
+    letter-spacing: -1px; color: var(--graphite-900);
+  }
+  .hero-title em { font-style: normal; color: var(--orange-deep); }
+  .hero-desc {
+    font-size: 18px; color: var(--graphite-700); max-width: 500px;
+    line-height: 1.7; margin: 24px 0 36px;
+  }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 44px; }
+  .hero-pillars { display: flex; gap: 28px; flex-wrap: wrap; }
+  .hero-pillar { display: flex; align-items: center; gap: 10px; }
+  .hero-pillar-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
+  .hero-pillar-text { font-size: 13.5px; font-weight: 700; color: var(--graphite-800); }
 
-/* SECTIONS */
-.section{padding:120px 8%}
-.section-title{
-font-size:42px;
-font-weight:800;
-margin-bottom:5px;
-font-family:'Montserrat',sans-serif;
-letter-spacing:-.5px;
-}
+  .hero-visual { position: relative; }
+  .hero-panel {
+    background: var(--graphite-900); border-radius: 18px; padding: 40px 40px 96px;
+    position: relative; overflow: hidden;
+  }
+  .hero-panel::before {
+    content: ''; position: absolute; top: -60px; right: -60px; width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(249,115,22,0.35), transparent 70%);
+  }
+  .hero-panel-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
+    color: var(--orange); margin-bottom: 22px; position: relative;
+  }
+  .hero-panel-list { list-style: none; display: flex; flex-direction: column; gap: 16px; position: relative; }
+  .hero-panel-list li {
+    display: flex; align-items: center; gap: 14px; color: var(--white);
+    font-size: 15.5px; font-weight: 600; padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .hero-panel-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  .hero-panel-icon {
+    width: 34px; height: 34px; border-radius: 8px; background: rgba(249,115,22,0.14);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .hero-panel-icon svg { width: 17px; height: 17px; stroke: var(--orange); fill: none; }
+  .hero-panel-foot {
+    margin-top: 26px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 13.5px; color: rgba(255,255,255,0.55); line-height: 1.6; position: relative;
+  }
+  .hero-badge {
+    position: absolute; bottom: -22px; left: 32px; background: var(--white);
+    border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px;
+    box-shadow: 0 12px 32px rgba(28,31,36,0.12);
+    display: flex; align-items: center; gap: 12px;
+  }
+  .hero-badge-icon { width: 38px; height: 38px; border-radius: 50%; background: var(--orange-tint); display: flex; align-items: center; justify-content: center; }
+  .hero-badge-icon svg { width: 18px; height: 18px; stroke: var(--orange-deep); fill: none; }
+  .hero-badge-text { font-size: 13px; font-weight: 700; color: var(--graphite-900); }
+  .hero-badge-sub { font-size: 11.5px; color: var(--graphite-500); }
+  @media(max-width:980px){ .hero-badge { position: static; margin-top: 20px; box-shadow: none; border-color: var(--line); } }
 
-.orange-line{
-width:70px;
-height:4px;
-background:#ff6a00;
-border-radius:4px;
-margin:15px 0 30px 0;
-}
+  /* ─── TICKER ─── */
+  .ticker-wrap { background: var(--graphite-900); overflow: hidden; padding: 16px 0; }
+  .ticker-inner { display: flex; white-space: nowrap; animation: ticker 34s linear infinite; width: max-content; }
+  .ticker-item {
+    font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    color: rgba(255,255,255,0.85); padding: 0 32px; display: flex; align-items: center; gap: 14px;
+  }
+  .ticker-item::after { content: '◆'; font-size: 7px; color: var(--orange); }
+  @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-.section-sub{
-text-align:center;
-color:#666;
-margin-bottom:60px;
-font-size:17px;
-}
+  /* ─── ABOUT ─── */
+  #about { padding: 120px 0; background: var(--white); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+  @media(max-width:900px){ .about-grid { grid-template-columns: 1fr; gap: 44px; } }
+  .capability-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--line); border-radius: 16px; overflow: hidden; }
+  .capability-tile { background: var(--off-white); padding: 34px 28px; transition: background 0.25s; }
+  .capability-tile:hover { background: var(--orange-tint); }
+  .capability-icon {
+    width: 44px; height: 44px; border-radius: 10px; background: var(--graphite-900);
+    display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
+  }
+  .capability-icon svg { width: 20px; height: 20px; stroke: var(--orange); fill: none; }
+  .capability-title { font-size: 15.5px; font-weight: 700; color: var(--graphite-900); margin-bottom: 6px; }
+  .capability-text { font-size: 13.5px; color: var(--graphite-500); line-height: 1.55; }
 
-/* ABOUT */
-.about-grid{
-display:grid;
-display:grid;grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-}
-.about-text{
-font-size:18px;
-color:#444;
-line-height:1.9;
-}
-.about-text strong{color:#000}
-.about-highlight{
-color:#ff6a00;
-font-weight:600;
-}
-.about-img img{
-width:100%;
-border-radius:16px;
-box-shadow:0 25px 60px rgba(0,0,0,.18);
-}
+  .about-highlights { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 36px; }
+  .about-highlight { padding: 18px 20px; background: var(--off-white); border-left: 3px solid var(--orange); border-radius: 4px; }
+  .about-highlight-title { font-size: 14px; font-weight: 700; color: var(--graphite-900); margin-bottom: 4px; }
+  .about-highlight-text { font-size: 13px; color: var(--graphite-500); line-height: 1.5; }
 
-/* VALORES */
-.values{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-margin-top:50px;
-}
-.value{
-background:#fff;
-padding:30px;
-border-radius:14px;
-border:1px solid rgba(0,0,0,.06);
-box-shadow:0 10px 30px rgba(0,0,0,.05);
-transition:.3s;
-}
-.value:hover{
-transform:translateY(-6px);
-box-shadow:0 20px 40px rgba(0,0,0,.08);
-}
-.icon{
-width:44px;
-height:44px;
-background:#ff6a00;
-border-radius:12px;
-margin-bottom:15px;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#fff;
-font-weight:700;
-font-size:18px;
-}
-.value h4{
-font-size:19px;
-margin-bottom:8px;
-font-family:'Montserrat',sans-serif;
-}
-.value p{
-font-size:15px;
-color:#555;
-line-height:1.6;
-}
+  /* ─── SERVICES ─── */
+  #services { padding: 120px 0; background: var(--off-white); }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media(max-width:900px){ .services-grid { grid-template-columns: 1fr 1fr; } }
+  @media(max-width:620px){ .services-grid { grid-template-columns: 1fr; } }
+  .service-card {
+    background: var(--white); border: 1px solid var(--line); border-radius: 14px;
+    padding: 34px 30px; transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  }
+  .service-card:hover { border-color: var(--orange); box-shadow: 0 16px 32px rgba(28,31,36,0.07); transform: translateY(-4px); }
+  .service-num { font-size: 12px; font-weight: 800; color: var(--orange-deep); letter-spacing: 1px; display: block; margin-bottom: 18px; }
+  .service-icon {
+    width: 46px; height: 46px; border-radius: 10px; background: var(--orange-tint);
+    display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
+  }
+  .service-icon svg { width: 22px; height: 22px; stroke: var(--orange-deep); fill: none; }
+  .service-title { font-size: 18.5px; font-weight: 700; color: var(--graphite-900); margin-bottom: 10px; letter-spacing: -0.2px; }
+  .service-text { font-size: 14px; color: var(--graphite-500); line-height: 1.65; margin-bottom: 18px; }
+  .service-link { font-size: 13.5px; font-weight: 700; color: var(--graphite-900); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+  .service-link:hover { color: var(--orange-deep); }
 
-/* SERVICES */
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:40px;
-margin-top:40px;
-}
-.card{
-background:#fff;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 20px 60px rgba(0,0,0,.08);
-transition:.3s;
-}
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 30px 80px rgba(255,106,0,.15);
-}
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
-.card-content{
-padding:25px;
-}
-.card-content h3{
-font-size:22px;
-margin-bottom:10px;
-font-family:'Montserrat',sans-serif;
-}
-.card-content p{
-color:#666;
-font-size:15px;
-line-height:1.6;
-}
+  /* ─── FACILITIES (dark feature band) ─── */
+  #facilities {
+    padding: 130px 0; background: var(--graphite-900); color: var(--white);
+    background-image: linear-gradient(120deg, rgba(28,31,36,0.94) 0%, rgba(28,31,36,0.8) 55%, rgba(28,31,36,0.94) 100%), url('industria.jpg');
+    background-size: cover; background-position: center;
+  }
+  .facilities-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  @media(max-width:900px){ .facilities-grid { grid-template-columns: 1fr; gap: 40px; } }
+  #facilities .eyebrow { color: var(--orange); }
+  #facilities .section-title { color: var(--white); }
+  #facilities .section-title em { color: var(--orange); }
+  #facilities .section-body { color: rgba(255,255,255,0.7); }
+  .facilities-list { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
+  .facilities-list li {
+    display: flex; align-items: center; gap: 14px; font-size: 15px; font-weight: 600;
+    padding: 16px 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+  }
+  .facilities-check { width: 22px; height: 22px; border-radius: 50%; background: var(--orange-deep); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+  .facilities-check svg { width: 12px; height: 12px; stroke: var(--white); fill: none; }
+  .facilities-note {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px;
+    padding: 32px; margin-top: 8px;
+  }
+  .facilities-note-title { font-size: 20px; font-weight: 800; margin-bottom: 12px; }
+  .facilities-note-text { font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 24px; }
 
-/* CTA */
-.cta{
-background:#ff6a00;
-color:#fff;
-text-align:center;
-padding:110px 20px;
-}
-.cta h2{
-font-size:44px;
-margin-bottom:15px;
-font-family:'Montserrat',sans-serif;
-}
-.cta p{
-opacity:.95;
-margin-bottom:30px;
-font-size:18px;
-}
-.cta .btn{
-background:#fff;
-color:#ff6a00;
-box-shadow:none;
-font-weight:700;
-}
+  /* ─── SOLUTIONS FOR COMPANIES ─── */
+  #solutions { padding: 120px 0; background: var(--white); }
+  .solutions-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  @media(max-width:980px){ .solutions-grid { grid-template-columns: 1fr 1fr; } }
+  @media(max-width:560px){ .solutions-grid { grid-template-columns: 1fr; } }
+  .solution-card { padding: 30px 26px; border-radius: 14px; background: var(--off-white); }
+  .solution-num {
+    width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid var(--orange);
+    color: var(--orange-deep); font-weight: 800; font-size: 14px;
+    display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
+  }
+  .solution-title { font-size: 16px; font-weight: 700; color: var(--graphite-900); margin-bottom: 8px; }
+  .solution-text { font-size: 13.5px; color: var(--graphite-500); line-height: 1.6; }
 
-/* FOOTER */
-footer{
-background:#111;
-color:#aaa;
-padding:60px 8%;
-text-align:center;
-font-size:14px;
-}
-footer strong{color:#fff}
+  /* ─── DIFFERENTIALS ─── */
+  #differentials { padding: 120px 0; background: var(--off-white); }
+  .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--line); border-radius: 16px; overflow: hidden; }
+  @media(max-width:900px){ .diff-grid { grid-template-columns: 1fr 1fr; } }
+  @media(max-width:560px){ .diff-grid { grid-template-columns: 1fr; } }
+  .diff-item { background: var(--white); padding: 34px 28px; transition: background 0.25s; }
+  .diff-item:hover { background: var(--orange-tint); }
+  .diff-icon { width: 42px; height: 42px; border-radius: 9px; background: var(--graphite-900); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+  .diff-icon svg { width: 19px; height: 19px; stroke: var(--orange); fill: none; }
+  .diff-title { font-size: 15.5px; font-weight: 700; color: var(--graphite-900); margin-bottom: 8px; }
+  .diff-text { font-size: 13.5px; color: var(--graphite-500); line-height: 1.6; }
 
-/* WHATS */
-.whats{
-position:fixed;
-right:25px;
-bottom:25px;
-background:#25D366;
-width:65px;
-height:65px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:28px;
-color:#fff;
-text-decoration:none;
-box-shadow:0 15px 40px rgba(0,0,0,.4);
-}
+  /* ─── HOW IT WORKS ─── */
+  #how { padding: 130px 0; background: var(--white); }
+  .timeline { position: relative; max-width: 820px; margin: 0 auto; }
+  .timeline::before {
+    content: ''; position: absolute; left: 27px; top: 8px; bottom: 8px; width: 2px;
+    background: var(--line-strong);
+  }
+  @media(min-width:760px){ .timeline::before { left: 50%; transform: translateX(-50%); } }
+  .timeline-step { position: relative; display: flex; align-items: flex-start; gap: 24px; margin-bottom: 40px; }
+  @media(min-width:760px){
+    .timeline-step { align-items: center; }
+    .timeline-step:nth-child(even) { flex-direction: row-reverse; }
+    .timeline-step:nth-child(even) .timeline-content { text-align: right; }
+  }
+  .timeline-dot {
+    width: 54px; height: 54px; border-radius: 50%; background: var(--graphite-900);
+    color: var(--orange); font-weight: 800; font-size: 15px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 1;
+  }
+  .timeline-content { flex: 1; padding-top: 4px; }
+  @media(min-width:760px){ .timeline-content { width: calc(50% - 27px); flex: none; } }
+  .timeline-title { font-size: 19px; font-weight: 700; color: var(--graphite-900); margin-bottom: 6px; }
+  .timeline-text { font-size: 14px; color: var(--graphite-500); line-height: 1.6; max-width: 340px; }
+  @media(min-width:760px){ .timeline-step:nth-child(even) .timeline-text { margin-left: auto; } }
 
-@media(max-width:900px){
+  /* ─── SEGMENTS ─── */
+  #segments { padding: 120px 0; background: var(--off-white); }
+  .segments-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  @media(max-width:900px){ .segments-grid { grid-template-columns: 1fr 1fr; } }
+  @media(max-width:600px){ .segments-grid { grid-template-columns: 1fr; } }
+  .segment-card {
+    position: relative; overflow: hidden; border-radius: 14px;
+    aspect-ratio: 4/3.1; background: var(--graphite-800);
+  }
+  .segment-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+  .segment-card:hover img { transform: scale(1.06); }
+  .segment-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(20,22,26,0.92) 0%, rgba(20,22,26,0.35) 55%, rgba(20,22,26,0.05) 100%);
+  }
+  .segment-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 24px; }
+  .segment-title { font-size: 19px; font-weight: 800; color: var(--white); letter-spacing: -0.2px; }
+  .segment-text { font-size: 13px; color: rgba(255,255,255,0.72); margin-top: 6px; line-height: 1.5; }
 
-.hero h1{font-size:36px}
-.hero p{font-size:18px}
-.section-title{font-size:32px}
-.about-grid{grid-template-columns:1fr}
+  /* ─── VISION ─── */
+  #vision { padding: 130px 0; text-align: center; background: var(--white); }
+  .vision-quote {
+    font-size: clamp(24px, 3.4vw, 40px); font-weight: 800; line-height: 1.3;
+    letter-spacing: -0.5px; max-width: 820px; margin: 0 auto 28px; color: var(--graphite-900);
+  }
+  .vision-quote em { font-style: normal; color: var(--orange-deep); }
+  .vision-divider { width: 56px; height: 3px; background: var(--orange); margin: 0 auto 26px; border-radius: 2px; }
+  .vision-sub { font-size: 12px; font-weight: 700; letter-spacing: 3px; color: var(--graphite-500); text-transform: uppercase; }
 
+  /* ─── CONTACT ─── */
+  #contact { padding: 130px 0; background: var(--off-white); }
+  .contact-layout { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 70px; align-items: start; }
+  @media(max-width:900px){ .contact-layout { grid-template-columns: 1fr; gap: 40px; } }
+  .contact-info-text { font-size: 15.5px; color: var(--graphite-700); line-height: 1.75; margin: 20px 0 36px; max-width: 460px; }
+  .contact-detail { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; padding: 16px 18px; border: 1px solid var(--line); background: var(--white); border-radius: 10px; }
+  .contact-detail-icon { width: 40px; height: 40px; border-radius: 8px; background: var(--orange-tint); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .contact-detail-icon svg { width: 18px; height: 18px; stroke: var(--orange-deep); fill: none; }
+  .contact-detail-text { font-size: 14px; font-weight: 600; color: var(--graphite-800); }
 
-}
+  .contact-form { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 36px; }
+  .form-group { margin-bottom: 18px; }
+  .form-label { display: block; font-size: 12.5px; font-weight: 700; color: var(--graphite-700); margin-bottom: 8px; }
+  .form-input, .form-textarea {
+    width: 100%; background: var(--off-white); border: 1.5px solid var(--line);
+    color: var(--graphite-900); font-family: var(--font); font-size: 14.5px;
+    padding: 13px 15px; outline: none; border-radius: 8px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .form-input:focus, .form-textarea:focus { border-color: var(--orange); background: var(--white); }
+  .form-textarea { resize: vertical; min-height: 120px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media(max-width:480px){ .form-row { grid-template-columns: 1fr; } }
+  .form-note { font-size: 12px; color: var(--graphite-500); margin-top: 14px; text-align: center; }
 
+  /* ─── WHATSAPP ─── */
+  .whatsapp-float {
+    position: fixed; bottom: 28px; right: 28px; z-index: 850;
+    width: 58px; height: 58px; background: #25d366; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+    text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 8px 26px rgba(37,211,102,0.55); }
+  .whatsapp-float svg { width: 28px; height: 28px; fill: white; }
+
+  /* ─── FOOTER ─── */
+  footer { background: var(--graphite-900); color: rgba(255,255,255,0.7); padding: 70px 0 0; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  @media(max-width:900px){ .footer-grid { grid-template-columns: 1fr 1fr; } }
+  @media(max-width:600px){ .footer-grid { grid-template-columns: 1fr; } }
+  .footer-brand { font-size: 22px; font-weight: 800; color: var(--white); margin-bottom: 14px; }
+  .footer-brand span { color: var(--orange); }
+  .footer-tagline { font-size: 13.5px; color: rgba(255,255,255,0.55); line-height: 1.6; max-width: 260px; }
+  .footer-col-title { font-size: 12.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--orange); margin-bottom: 20px; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 11px; }
+  .footer-links a { font-size: 13.5px; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-bottom { padding: 22px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.5); }
+  .footer-legal { display: flex; gap: 22px; }
+  .footer-legal a { font-size: 12px; color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-legal a:hover { color: rgba(255,255,255,0.7); }
 </style>
-
 </head>
 <body>
 
-<header>
+<a href="#main" class="skip-link">Pular para o conteúdo</a>
 
-<div class="logo-area">
-<img src="logo-fgl.png" class="logo-img">
-<div class="logo-nome">FGL BRASIL</div>
-</div>
-
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-<nav id="menu">
-<a href="#sobre">Sobre Nós</a>
-<a href="#servicos">Serviços</a>
-<a href="#faq">Perguntas Frequentes</a>
-<a href="#contato">Contato</a>
+<!-- NAVIGATION -->
+<nav id="navbar" aria-label="Navegação principal">
+  <div class="nav-inner">
+    <a href="#hero" class="brand" aria-label="FGL Brasil — página inicial">
+      <span class="brand-mark">FGL <span>Brasil</span></span>
+      <span class="brand-sub">Terceirização &amp; Facilities</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">Quem Somos</a></li>
+      <li><a href="#services">Serviços</a></li>
+      <li><a href="#facilities">Facilities</a></li>
+      <li><a href="#how">Como Funciona</a></li>
+      <li><a href="#segments">Segmentos</a></li>
+      <li><a href="#contact" class="nav-cta">Solicitar Proposta</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
-</header>
-
-
-<section class="hero">
-<div class="hero-content">
-<h1>Cuidamos da operação para que sua empresa funcione com excelência</h1>
-<p>Terceirização de serviços com ética, eficiência e compromisso humano.</p>
-<a class="btn" href="https://wa.me/5511978316351">Solicitar Orçamento</a>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="toggleMenu()" aria-label="Fechar menu">&times;</button>
+  <a href="#about" onclick="toggleMenu()">Quem Somos</a>
+  <a href="#services" onclick="toggleMenu()">Serviços</a>
+  <a href="#facilities" onclick="toggleMenu()">Facilities</a>
+  <a href="#solutions" onclick="toggleMenu()">Soluções</a>
+  <a href="#how" onclick="toggleMenu()">Como Funciona</a>
+  <a href="#segments" onclick="toggleMenu()">Segmentos</a>
+  <a href="#contact" onclick="toggleMenu()" class="mobile-cta">Solicitar Proposta</a>
 </div>
+
+<main id="main">
+
+<!-- HERO -->
+<section id="hero" aria-label="Apresentação">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">FGL Brasil — Terceirização &amp; Facilities</div>
+        <h1 class="hero-title">A operação da sua empresa, <em>sob gestão profissional.</em></h1>
+        <p class="hero-desc">A FGL Brasil estrutura equipes, processos e serviços operacionais para empresas que precisam de eficiência, organização e um parceiro que realmente assume a responsabilidade da operação.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary">Solicitar Proposta</a>
+          <a href="#services" class="btn btn-outline">Conhecer Nossos Serviços</a>
+        </div>
+        <div class="hero-pillars">
+          <div class="hero-pillar"><span class="hero-pillar-dot"></span><span class="hero-pillar-text">Gestão de Pessoas</span></div>
+          <div class="hero-pillar"><span class="hero-pillar-dot"></span><span class="hero-pillar-text">Facilities Completo</span></div>
+          <div class="hero-pillar"><span class="hero-pillar-dot"></span><span class="hero-pillar-text">Atendimento Dedicado</span></div>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-panel">
+          <div class="hero-panel-label">Frentes de Atuação</div>
+          <ul class="hero-panel-list">
+            <li><span class="hero-panel-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M9 13h1M14 9h1M14 13h1M9 21v-4h6v4"/></svg></span>Portaria e Recepção</li>
+            <li><span class="hero-panel-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M3 6l3 1 5 12 8-14"/><path d="M9 19h9"/></svg></span>Limpeza e Conservação</li>
+            <li><span class="hero-panel-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.1-3.1a4 4 0 01-5.4 5.4L6 20.9 3.1 18l9.4-9.4A4 4 0 0117.9 3.2z"/></svg></span>Manutenção Predial</li>
+            <li><span class="hero-panel-icon"><svg viewBox="0 0 24 24" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a5 5 0 015-5h4a5 5 0 015 5v2"/><path d="M17 11a4 4 0 000-8M23 21v-2a5 5 0 00-4-4.9"/></svg></span>Gestão de Equipes</li>
+          </ul>
+          <div class="hero-panel-foot">Um único parceiro para estruturar, operar e gerir os serviços que sustentam sua empresa.</div>
+        </div>
+        <div class="hero-badge">
+          <div class="hero-badge-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <div>
+            <div class="hero-badge-text">Compliance Trabalhista</div>
+            <div class="hero-badge-sub">Processos formalizados de gestão de pessoas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="sobre" class="section">
-<div class="about-grid">
-
-<div>
-<h2 class="section-title">Sobre o Grupo FGL Brasil</h2>
-<div class="orange-line"></div>
-
-<div class="about-text">
-<p>
-O <strong>Grupo FGL Brasil</strong> nasceu com o propósito de oferecer terceirização de serviços com <strong>responsabilidade, ética e excelência.</strong>
-</p>
-<br>
-<p>
-Acreditamos que cada profissional terceirizado representa nossa marca no dia a dia dos clientes, por isso investimos em <strong>processos, pessoas e acompanhamento constante.</strong>
-</p>
-<br>
-<p class="about-highlight">
-Nossa missão é fazer sua operação funcionar perfeitamente, para que você possa focar no crescimento do seu negócio.
-</p>
-</div>
-</div>
-
-<div class="about-img">
-<img src="https://019c1003-6a1a-7232-95dd-d7c8f5c92897.mochausercontent.com/sobre-fgl.png">
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-inner">
+    <div class="ticker-item">Terceirização de Mão de Obra</div>
+    <div class="ticker-item">Facilities Corporativo</div>
+    <div class="ticker-item">Limpeza e Conservação</div>
+    <div class="ticker-item">Manutenção Predial</div>
+    <div class="ticker-item">Portaria e Recepção</div>
+    <div class="ticker-item">Apoio Administrativo</div>
+    <div class="ticker-item">Jardinagem e Paisagismo</div>
+    <div class="ticker-item">Gestão de Equipes</div>
+    <div class="ticker-item">Terceirização de Mão de Obra</div>
+    <div class="ticker-item">Facilities Corporativo</div>
+    <div class="ticker-item">Limpeza e Conservação</div>
+    <div class="ticker-item">Manutenção Predial</div>
+    <div class="ticker-item">Portaria e Recepção</div>
+    <div class="ticker-item">Apoio Administrativo</div>
+    <div class="ticker-item">Jardinagem e Paisagismo</div>
+    <div class="ticker-item">Gestão de Equipes</div>
+  </div>
 </div>
 
-</div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="eyebrow">Quem Somos</div>
+        <h2 class="section-title">Uma empresa estruturada para <em>assumir operações</em></h2>
+        <p class="section-body">A FGL Brasil é especializada em terceirização de mão de obra e facilities para empresas que precisam simplificar sua operação sem abrir mão de qualidade. Atuamos como uma extensão da equipe do cliente, assumindo pessoas, processos e rotinas operacionais com organização e responsabilidade.</p>
+        <div class="about-highlights">
+          <div class="about-highlight">
+            <div class="about-highlight-title">Gestão de Pessoas</div>
+            <div class="about-highlight-text">Recrutamento, escala e supervisão de equipes terceirizadas</div>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-title">Processos Padronizados</div>
+            <div class="about-highlight-text">Rotinas operacionais documentadas e replicáveis</div>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-title">Atendimento Dedicado</div>
+            <div class="about-highlight-text">Ponto de contato próximo para cada cliente</div>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-title">Compromisso Operacional</div>
+            <div class="about-highlight-text">Responsabilidade real pela entrega combinada</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="capability-grid">
+          <div class="capability-tile">
+            <div class="capability-icon"><svg viewBox="0 0 24 24" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a5 5 0 015-5h4a5 5 0 015 5v2"/><path d="M17 11a4 4 0 000-8M23 21v-2a5 5 0 00-4-4.9"/></svg></div>
+            <h3 class="capability-title">Pessoas</h3>
+            <div class="capability-text">Seleção, capacitação e gestão de profissionais terceirizados</div>
+          </div>
+          <div class="capability-tile">
+            <div class="capability-icon"><svg viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></div>
+            <h3 class="capability-title">Processos</h3>
+            <div class="capability-text">Padrões operacionais claros para cada tipo de serviço</div>
+          </div>
+          <div class="capability-tile">
+            <div class="capability-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+            <h3 class="capability-title">Conformidade</h3>
+            <div class="capability-text">Gestão trabalhista formalizada e transparente</div>
+          </div>
+          <div class="capability-tile">
+            <div class="capability-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
+            <h3 class="capability-title">Resultados</h3>
+            <div class="capability-text">Acompanhamento contínuo da qualidade entregue</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="section" style="background:#fff7f2">
-<h2 class="section-title" style="text-align:center">Valores que Guiam Nossa Atuação</h2>
-
-<div class="values">
-
-<div class="value">
-<div class="icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-<path d="M12 2L20 6V12C20 17 16.5 21 12 22C7.5 21 4 17 4 12V6L12 2Z" stroke="white" stroke-width="2"/>
-</svg>
-</div>
-<h4>Ética e Transparência</h4>
-<p>Atuação com total respeito às normas e compromisso com a verdade.</p>
-</div>
-
-<div class="value">
-<div class="icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-<circle cx="8" cy="8" r="4" stroke="white" stroke-width="2"/>
-<circle cx="17" cy="10" r="3" stroke="white" stroke-width="2"/>
-<path d="M2 20C2 16 5 14 8 14C11 14 14 16 14 20" stroke="white" stroke-width="2"/>
-<path d="M14 20C14 17.5 16 16 18 16C20 16 22 17.5 22 20" stroke="white" stroke-width="2"/>
-</svg>
-</div>
-<h4>Compromisso com Pessoas</h4>
-<p>Valorizamos cada colaborador como parte essencial da nossa equipe.</p>
-</div>
-
-<div class="value">
-<div class="icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-<path d="M12 17L18 21L16 14L22 10L14.5 9L12 2L9.5 9L2 10L8 14L6 21L12 17Z" stroke="white" stroke-width="2"/>
-</svg>
-</div>
-<h4>Excelência Operacional</h4>
-<p>Buscamos a máxima qualidade em cada serviço prestado.</p>
-</div>
-
-<div class="value">
-<div class="icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-<path d="M12 3V21M3 7H21M5 7C5 13 9 17 12 17C15 17 19 13 19 7" stroke="white" stroke-width="2"/>
-</svg>
-</div>
-<h4>Responsabilidade Trabalhista</h4>
-<p>Cumprimento rigoroso de toda legislação vigente.</p>
-</div>
-
-<div class="value">
-<div class="icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-<path d="M8 12L11 15L16 9" stroke="white" stroke-width="2"/>
-<circle cx="12" cy="12" r="9" stroke="white" stroke-width="2"/>
-</svg>
-</div>
-<h4>Confiança e Proximidade</h4>
-<p>Relacionamentos sólidos e duradouros com clientes.</p>
-</div>
-
-<div class="value">
-<div class="icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-<path d="M3 17L9 11L13 15L21 7" stroke="white" stroke-width="2"/>
-<path d="M21 7H15M21 7V13" stroke="white" stroke-width="2"/>
-</svg>
-</div>
-<h4>Foco em Resultados</h4>
-<p>Soluções eficientes que geram valor real.</p>
-</div>
-
-</div>
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">Nossos Serviços</div>
+      <h2 class="section-title">Soluções para a <em>operação da sua empresa</em></h2>
+      <p class="section-body">Cada serviço é pensado para resolver uma necessidade real de operação, com processo claro, equipe qualificada e acompanhamento próximo.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-num">01</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M9 13h1M14 9h1M14 13h1M9 21v-4h6v4"/></svg></div>
+        <h3 class="service-title">Portaria e Recepção</h3>
+        <p class="service-text">Recepção, controle administrativo de fluxo e atendimento organizado para colaboradores, visitantes e prestadores de serviço.</p>
+        <a href="#contact" class="service-link">Solicitar Avaliação →</a>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">02</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M3 6l3 1 5 12 8-14"/><path d="M9 19h9"/></svg></div>
+        <h3 class="service-title">Limpeza e Conservação</h3>
+        <p class="service-text">Equipes especializadas em limpeza e conservação de ambientes corporativos, industriais e áreas comuns.</p>
+        <a href="#contact" class="service-link">Solicitar Avaliação →</a>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">03</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.1-3.1a4 4 0 01-5.4 5.4L6 20.9 3.1 18l9.4-9.4A4 4 0 0117.9 3.2z"/></svg></div>
+        <h3 class="service-title">Manutenção Predial</h3>
+        <p class="service-text">Manutenção preventiva e corretiva de instalações, estruturas e sistemas prediais para operação contínua.</p>
+        <a href="#contact" class="service-link">Solicitar Avaliação →</a>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">04</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+        <h3 class="service-title">Jardinagem e Paisagismo</h3>
+        <p class="service-text">Manutenção de áreas verdes, paisagismo e conservação de espaços externos com padrão consistente.</p>
+        <a href="#contact" class="service-link">Solicitar Avaliação →</a>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">05</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
+        <h3 class="service-title">Apoio Administrativo e Operacional</h3>
+        <p class="service-text">Mão de obra para funções de apoio administrativo, logística interna e rotinas operacionais.</p>
+        <a href="#contact" class="service-link">Solicitar Avaliação →</a>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">06</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a5 5 0 015-5h4a5 5 0 015 5v2"/><path d="M17 11a4 4 0 000-8M23 21v-2a5 5 0 00-4-4.9"/></svg></div>
+        <h3 class="service-title">Gestão de Equipes Terceirizadas</h3>
+        <p class="service-text">Recrutamento, escala, supervisão e substituição de profissionais, com conformidade trabalhista.</p>
+        <a href="#contact" class="service-link">Solicitar Avaliação →</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="section" style="background:#fff;">
-<div style="max-width:1100px;margin:auto;display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;">
-
-<div>
-<h2 class="section-title">Gestão Profissional e Acompanhamento Contínuo</h2>
-<div class="orange-line"></div>
-
-<p style="font-size:18px;color:#444;line-height:1.9;margin-bottom:18px;">
-Atuamos com <strong>rigor absoluto no cumprimento das leis trabalhistas</strong>, garantindo segurança jurídica, transparência e tranquilidade total para nossos clientes.
-</p>
-
-<p style="font-size:18px;color:#444;line-height:1.9;margin-bottom:18px;">
-Utilizamos <strong>tecnologia e inteligência artificial</strong> para acompanhamento dos postos terceirizados, controle de presença, análise de desempenho e monitoramento contínuo das operações.
-</p>
-
-<p style="font-size:18px;color:#444;line-height:1.9;margin-bottom:18px;">
-Aliamos tecnologia a uma <strong>supervisão humanizada</strong>, com visitas técnicas presenciais, alinhamentos operacionais e acompanhamento próximo em cada contrato.
-</p>
-
-<p style="font-size:18px;color:#ff6a00;font-weight:600;">
-Nosso compromisso é garantir eficiência operacional, segurança jurídica e excelência no dia a dia da sua operação.
-</p>
-</div>
-
-<div>
-<img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600" style="width:100%;border-radius:18px;box-shadow:0 25px 70px rgba(0,0,0,.18);">
-
-</div>
+<!-- FACILITIES -->
+<section id="facilities">
+  <div class="container">
+    <div class="facilities-grid">
+      <div class="reveal">
+        <div class="eyebrow">Facilities</div>
+        <h2 class="section-title">Um único parceiro para <em>toda a operação predial</em></h2>
+        <p class="section-body">A FGL Brasil integra os serviços de facilities em uma única gestão — reduzindo a quantidade de fornecedores, padronizando processos e simplificando o dia a dia das equipes internas.</p>
+        <ul class="facilities-list">
+          <li><span class="facilities-check"><svg viewBox="0 0 24 24" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Consolidação de fornecedores em um único contrato</li>
+          <li><span class="facilities-check"><svg viewBox="0 0 24 24" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Padrões operacionais consistentes em todas as unidades</li>
+          <li><span class="facilities-check"><svg viewBox="0 0 24 24" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Gestão centralizada com ponto de contato único</li>
+        </ul>
+      </div>
+      <div class="reveal facilities-note">
+        <div class="facilities-note-title">Facilities sob medida para sua operação</div>
+        <p class="facilities-note-text">Cada empresa tem uma estrutura diferente. Montamos um plano de facilities alinhado ao porte, ao segmento e às necessidades reais da sua operação.</p>
+        <a href="#contact" class="btn btn-primary">Solicitar Proposta</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- SEGURANÇA JURÍDICA -->
-<section class="section" style="background:#fff;">
-<div class="juridica-grid">
-<div>
-<h2 class="section-title">Segurança Jurídica e Tranquilidade Total</h2>
-<div class="orange-line"></div>
-
-<p style="font-size:18px;color:#444;line-height:1.9;margin-bottom:18px;">
-Ao terceirizar com o <strong>Grupo FGL Brasil</strong>, sua empresa elimina riscos trabalhistas e ganha uma gestão profissional completa, com responsabilidade total sobre cada colaborador alocado.
-</p>
-
-<p style="font-size:18px;color:#444;line-height:1.9;margin-bottom:18px;">
-Nossa estrutura cuida de <strong>contratos, encargos, benefícios, substituições, folha de pagamento e conformidade legal</strong>, garantindo segurança jurídica e previsibilidade financeira.
-</p>
-
-<p style="font-size:18px;color:#ff6a00;font-weight:600;">
-Você foca no crescimento da sua operação enquanto nós assumimos toda a gestão operacional e trabalhista.
-</p>
-</div>
-
-<div style="background:#fff7f2;padding:35px;border-radius:18px;box-shadow:0 25px 70px rgba(0,0,0,.08);">
-
-<div style="display:flex;align-items:center;margin-bottom:18px;font-weight:600;">
-<div style="width:28px;height:28px;background:#ff6a00;border-radius:8px;margin-right:12px;display:flex;align-items:center;justify-content:center;">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-<path d="M6 12L10 16L18 8" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-</div>
-
-Cumprimento rigoroso da legislação trabalhista
-</div>
-
-<div style="display:flex;align-items:center;margin-bottom:18px;font-weight:600;">
-<div style="width:28px;height:28px;background:#ff6a00;border-radius:8px;margin-right:12px;display:flex;align-items:center;justify-content:center;">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-<path d="M6 12L10 16L18 8" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-</div>
-
-Encargos e obrigações totalmente regularizados
-</div>
-
-<div style="display:flex;align-items:center;margin-bottom:18px;font-weight:600;">
-<div style="width:28px;height:28px;background:#ff6a00;border-radius:8px;margin-right:12px;display:flex;align-items:center;justify-content:center;">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-<path d="M6 12L10 16L18 8" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-</div>
-
-Substituição rápida em faltas ou férias
-</div>
-
-<div style="display:flex;align-items:center;margin-bottom:18px;font-weight:600;">
-<div style="width:28px;height:28px;background:#ff6a00;border-radius:8px;margin-right:12px;display:flex;align-items:center;justify-content:center;">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-<path d="M6 12L10 16L18 8" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-</div>
-
-Supervisão e acompanhamento contínuo
-</div>
-
-<div style="display:flex;align-items:center;font-weight:600;">
-<div style="width:28px;height:28px;background:#ff6a00;border-radius:8px;margin-right:12px;display:flex;align-items:center;justify-content:center;">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-<path d="M6 12L10 16L18 8" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-</div>
-
-Contratos claros e transparência total
-</div>
-
-</div>
-
-</div>
+<!-- SOLUTIONS FOR COMPANIES -->
+<section id="solutions">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">Soluções para Empresas</div>
+      <h2 class="section-title">Modelos de <em>parceria operacional</em></h2>
+      <p class="section-body">A FGL Brasil se adapta ao momento e à estrutura de cada cliente, com diferentes formatos de atuação.</p>
+    </div>
+    <div class="solutions-grid">
+      <div class="solution-card reveal">
+        <div class="solution-num">01</div>
+        <h3 class="solution-title">Terceirização Completa</h3>
+        <p class="solution-text">A FGL assume integralmente a operação e a equipe de uma determinada área ou função.</p>
+      </div>
+      <div class="solution-card reveal">
+        <div class="solution-num">02</div>
+        <h3 class="solution-title">Apoio Complementar</h3>
+        <p class="solution-text">Reforço de equipe em períodos de maior demanda ou para funções específicas.</p>
+      </div>
+      <div class="solution-card reveal">
+        <div class="solution-num">03</div>
+        <h3 class="solution-title">Consolidação de Fornecedores</h3>
+        <p class="solution-text">Substituição de múltiplos prestadores por um único parceiro operacional.</p>
+      </div>
+      <div class="solution-card reveal">
+        <div class="solution-num">04</div>
+        <h3 class="solution-title">Gestão de Equipe Própria</h3>
+        <p class="solution-text">Supervisão e padronização de processos aplicados à equipe já existente do cliente.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-
-<section id="servicos" class="section">
-<h2 class="section-title" style="text-align:center">Nossos Serviços</h2>
-<p class="section-sub">Soluções completas em terceirização para empresas, condomínios e indústrias</p>
-
-<div class="services">
-
-<div class="card">
-<img src="https://019c1003-6a1a-7232-95dd-d7c8f5c92897.mochausercontent.com/auxiliar-limpeza.png">
-<div class="card-content">
-<h3>Auxiliar de Limpeza</h3>
-<p>Limpeza, conservação e higienização com padrões rigorosos de qualidade para ambientes corporativos e condomínios.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://019c1003-6a1a-7232-95dd-d7c8f5c92897.mochausercontent.com/auxiliar-administrativo.png">
-<div class="card-content">
-<h3>Auxiliar Administrativo</h3>
-<p>Suporte administrativo qualificado para rotinas internas, atendimento e organização documental.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://019c1003-6a1a-7232-95dd-d7c8f5c92897.mochausercontent.com/controlador-acesso.png">
-<div class="card-content">
-<h3>Controlador de Acesso</h3>
-<p>Controle eficiente de entrada e saída com organização e segurança para empresas e condomínios.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://019c1003-6a1a-7232-95dd-d7c8f5c92897.mochausercontent.com/vigilancia-desarmada-executiva.png">
-<div class="card-content">
-<h3>Vigilância Desarmada</h3>
-<p>Presença preventiva e ostensiva para segurança patrimonial e controle de ambientes.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://019c1003-6a1a-7232-95dd-d7c8f5c92897.mochausercontent.com/jardinagem.png">
-<div class="card-content">
-<h3>Jardinagem</h3>
-<p>Manutenção de áreas verdes, paisagismo e conservação ambiental de alto padrão.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://019c1003-6a1a-7232-95dd-d7c8f5c92897.mochausercontent.com/terceirizacao-sob-medida.png">
-<div class="card-content">
-<h3>Terceirização Sob Medida</h3>
-<p>Soluções personalizadas com gestão dedicada e acompanhamento contínuo.</p>
-</div>
-</div>
-
-</div>
+<!-- DIFFERENTIALS -->
+<section id="differentials">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">Diferenciais</div>
+      <h2 class="section-title">Por que empresas <em>escolhem a FGL</em></h2>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-item reveal">
+        <div class="diff-icon"><svg viewBox="0 0 24 24" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a5 5 0 015-5h4a5 5 0 015 5v2"/></svg></div>
+        <h3 class="diff-title">Gestão de Pessoas Especializada</h3>
+        <p class="diff-text">Processos estruturados de recrutamento, capacitação e supervisão de equipes.</p>
+      </div>
+      <div class="diff-item reveal">
+        <div class="diff-icon"><svg viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></div>
+        <h3 class="diff-title">Processos Padronizados</h3>
+        <p class="diff-text">Rotinas operacionais documentadas, replicáveis e fáceis de auditar.</p>
+      </div>
+      <div class="diff-item reveal">
+        <div class="diff-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+        <h3 class="diff-title">Conformidade Trabalhista</h3>
+        <p class="diff-text">Gestão formalizada, reduzindo riscos operacionais e trabalhistas para o cliente.</p>
+      </div>
+      <div class="diff-item reveal">
+        <div class="diff-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <h3 class="diff-title">Atendimento Dedicado</h3>
+        <p class="diff-text">Um ponto de contato próximo, acompanhando cada operação de perto.</p>
+      </div>
+      <div class="diff-item reveal">
+        <div class="diff-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg></div>
+        <h3 class="diff-title">Flexibilidade Operacional</h3>
+        <p class="diff-text">Estrutura que se ajusta ao crescimento e às sazonalidades da operação do cliente.</p>
+      </div>
+      <div class="diff-item reveal">
+        <div class="diff-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.5 9a9 9 0 0114.85-3.36L23 10M1 14l4.65 4.36A9 9 0 0020.5 15"/></svg></div>
+        <h3 class="diff-title">Continuidade Garantida</h3>
+        <p class="diff-text">Substituição rápida de profissionais, sem impacto na rotina do cliente.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq" class="section" style="background:#fff7f2">
-<h2 class="section-title" style="text-align:center">Dúvidas Frequentes</h2>
-<p class="section-sub">Entenda como funciona a terceirização com o Grupo FGL Brasil</p>
-
-<div class="faq-container">
-
-<div class="faq-item">
-<div class="faq-question">Como funciona o processo de contratação?</div>
-<div class="faq-answer">
-Realizamos uma análise inicial da sua necessidade, seguida de visita técnica (quando necessário) e envio de proposta personalizada em até 24h. Após aprovação, iniciamos o processo de seleção e implantação da equipe.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">A FGL cuida de toda a parte trabalhista?</div>
-<div class="faq-answer">
-Sim. Toda a gestão trabalhista, folha de pagamento, encargos, benefícios, substituições e obrigações legais ficam sob responsabilidade do Grupo FGL Brasil, garantindo total segurança jurídica ao cliente.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">Existe supervisão dos profissionais alocados?</div>
-<div class="faq-answer">
-Sim. Realizamos acompanhamento contínuo com supervisão operacional, visitas técnicas presenciais e monitoramento por tecnologia e inteligência artificial, garantindo qualidade constante no serviço prestado.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">Em quanto tempo um posto pode ser implantado?</div>
-<div class="faq-answer">
-Dependendo da função e da urgência, conseguimos implantar profissionais em poucos dias. Para operações maiores ou personalizadas, definimos um cronograma estratégico junto ao cliente.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">Posso terceirizar apenas um profissional?</div>
-<div class="faq-answer">
-Sim. Atendemos desde demandas pontuais com um único profissional até operações completas com múltiplos postos e gestão dedicada.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">A empresa atende condomínios e indústrias?</div>
-<div class="faq-answer">
-Sim. Atuamos em empresas, condomínios residenciais e comerciais, indústrias, centros logísticos, escritórios corporativos e operações personalizadas.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">Os profissionais passam por treinamento?</div>
-<div class="faq-answer">
-Todos os colaboradores passam por seleção rigorosa, treinamento e alinhamento com os padrões do cliente antes de iniciar as atividades, garantindo postura, eficiência e profissionalismo.
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">Como solicitar um orçamento?</div>
-<div class="faq-answer">
-Basta clicar no botão de orçamento ou chamar diretamente no WhatsApp. Nossa equipe fará um diagnóstico rápido da sua operação e enviará uma proposta personalizada.
-</div>
-</div>
-
-</div>
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="eyebrow" style="justify-content:center;">Processo</div>
+      <h2 class="section-title">Como <em>funciona</em></h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-step reveal">
+        <div class="timeline-dot">01</div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Diagnóstico</h3>
+          <p class="timeline-text">Entendemos a operação, a estrutura e as necessidades reais da empresa.</p>
+        </div>
+      </div>
+      <div class="timeline-step reveal">
+        <div class="timeline-dot">02</div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Proposta Personalizada</h3>
+          <p class="timeline-text">Desenhamos uma solução sob medida para o porte e o segmento do cliente.</p>
+        </div>
+      </div>
+      <div class="timeline-step reveal">
+        <div class="timeline-dot">03</div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Estruturação da Equipe</h3>
+          <p class="timeline-text">Recrutamento, seleção e capacitação dos profissionais envolvidos.</p>
+        </div>
+      </div>
+      <div class="timeline-step reveal">
+        <div class="timeline-dot">04</div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Implantação</h3>
+          <p class="timeline-text">Início da operação com acompanhamento próximo nas primeiras semanas.</p>
+        </div>
+      </div>
+      <div class="timeline-step reveal">
+        <div class="timeline-dot">05</div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Gestão Contínua</h3>
+          <p class="timeline-text">Supervisão de escalas, qualidade e conformidade ao longo do contrato.</p>
+        </div>
+      </div>
+      <div class="timeline-step reveal">
+        <div class="timeline-dot">06</div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Melhoria Contínua</h3>
+          <p class="timeline-text">Acompanhamento de indicadores e ajustes constantes na operação.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<style>
-
-/* RESET */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
-
-html, body{
-overflow-x:hidden;
-width:100%;
-}
-
-/* FAQ */
-.faq-container{
-max-width:900px;
-margin:50px auto 0 auto;
-display:flex;
-flex-direction:column;
-gap:14px;
-}
-
-.faq-item{
-background:#fff;
-border-radius:14px;
-box-shadow:0 10px 30px rgba(0,0,0,.06);
-overflow:hidden;
-border:1px solid rgba(0,0,0,.06);
-transition:.3s;
-}
-
-.faq-question{
-padding:20px 25px;
-font-weight:600;
-font-family:'Montserrat',sans-serif;
-cursor:pointer;
-position:relative;
-font-size:17px;
-color:#111;
-}
-
-.faq-question:hover{
-background:#fff3eb;
-}
-
-.faq-question::after{
-content:"+";
-position:absolute;
-right:25px;
-font-size:22px;
-color:#ff6a00;
-transition:.3s;
-}
-
-.faq-item.active .faq-question::after{
-content:"−";
-}
-
-.faq-answer{
-max-height:0;
-overflow:hidden;
-transition:max-height .35s ease;
-padding:0 25px;
-color:#555;
-font-size:16px;
-line-height:1.7;
-}
-
-.faq-item.active .faq-answer{
-max-height:300px;
-padding:0 25px 22px 25px;
-}
-
-/* ===== HERO MOBILE ===== */
-@media(max-width:900px){
-
-.hero{
-width:100%;
-max-width:100%;
-overflow:hidden;
-padding:120px 20px 80px 20px;
-height:auto;
-min-height:100vh;
-}
-
-.hero-content{
-width:100%;
-max-width:100%;
-padding:0 5px;
-}
-
-.hero h1{
-font-size:34px;
-line-height:1.2;
-word-break:break-word;
-}
-
-.hero p{
-font-size:17px;
-padding:0 5px;
-}
-
-}
-
-/* ============================= */
-/* SEGURANÇA JURÍDICA — DESKTOP */
-/* ============================= */
-
-.juridica-grid{
-max-width:1150px;
-margin:auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-}
-
-/* ============================= */
-/* SEGURANÇA JURÍDICA — MOBILE */
-/* ============================= */
-
-@media(max-width:900px){
-
-.juridica-grid{
-display:flex !important;
-flex-direction:column !important;
-gap:30px !important;
-}
-
-.juridica-grid > div{
-width:100% !important;
-max-width:100% !important;
-}
-
-}
-
-</style>
-
-<script>
-// FAQ abrir e fechar
-document.querySelectorAll(".faq-question").forEach(q=>{
-q.addEventListener("click",()=>{
-const item = q.parentElement;
-item.classList.toggle("active");
-});
-});
-
-// abrir hamburger
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
-}
-
-// fechar hamburger ao clicar em qualquer item
-document.querySelectorAll("#menu a").forEach(link=>{
-link.addEventListener("click",()=>{
-document.getElementById("menu").classList.remove("active");
-});
-});
-</script>
-
-<section id="contato" class="cta">
-<h2>Pronto para elevar o padrão da sua operação?</h2>
-<p>Fale agora com nossa equipe e receba uma proposta personalizada.</p>
-<a class="btn" href="https://wa.me/5511978316351?text=Olá%20Robson,%20tudo%20bem?%20Vim%20pelo%20site%20da%20FGL%20Brasil%20e%20gostaria%20de%20solicitar%20um%20orçamento%20personalizado.%20Posso%20te%20passar%20algumas%20informações%20da%20operação.">
-Solicitar Orçamento Agora
-</a>
+<!-- SEGMENTS -->
+<section id="segments">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">Segmentos Atendidos</div>
+      <h2 class="section-title">Empresas de diferentes <em>perfis, um mesmo padrão</em></h2>
+    </div>
+    <div class="segments-grid">
+      <div class="segment-card reveal">
+        <img src="condominios.jpg" alt="Condomínio residencial visto do alto, com áreas comuns e paisagismo" loading="lazy" width="1400" height="933">
+        <div class="segment-overlay"></div>
+        <div class="segment-content">
+          <h3 class="segment-title">Condomínios</h3>
+          <div class="segment-text">Portaria, limpeza, manutenção e jardinagem para áreas comuns residenciais e comerciais.</div>
+        </div>
+      </div>
+      <div class="segment-card reveal">
+        <img src="industria.jpg" alt="Planta industrial de grande porte iluminada ao entardecer" loading="lazy" width="1400" height="933">
+        <div class="segment-overlay"></div>
+        <div class="segment-content">
+          <h3 class="segment-title">Indústrias</h3>
+          <div class="segment-text">Apoio operacional, manutenção predial e equipes terceirizadas para plantas fabris.</div>
+        </div>
+      </div>
+      <div class="segment-card reveal">
+        <img src="logistica.jpg" alt="Centro de distribuição logística com caminhões nas docas" loading="lazy" width="1400" height="933">
+        <div class="segment-overlay"></div>
+        <div class="segment-content">
+          <h3 class="segment-title">Centros Logísticos</h3>
+          <div class="segment-text">Equipes de apoio operacional e facilities para centros de distribuição.</div>
+        </div>
+      </div>
+      <div class="segment-card reveal">
+        <img src="fazenda.jpg" alt="Sede de fazenda com currais e área rural ao entardecer" loading="lazy" width="1400" height="933">
+        <div class="segment-overlay"></div>
+        <div class="segment-content">
+          <h3 class="segment-title">Agronegócio</h3>
+          <div class="segment-text">Mão de obra e apoio operacional para propriedades e operações rurais.</div>
+        </div>
+      </div>
+      <div class="segment-card reveal">
+        <img src="solar.jpg" alt="Usina de energia solar fotovoltaica em campo aberto" loading="lazy" width="1400" height="933">
+        <div class="segment-overlay"></div>
+        <div class="segment-content">
+          <h3 class="segment-title">Energia</h3>
+          <div class="segment-text">Facilities e apoio operacional para usinas e plantas de geração de energia.</div>
+        </div>
+      </div>
+      <div class="segment-card reveal">
+        <img src="infraestrutura.jpg" alt="Terminal portuário e de infraestrutura logística ao entardecer" loading="lazy" width="1400" height="933">
+        <div class="segment-overlay"></div>
+        <div class="segment-content">
+          <h3 class="segment-title">Infraestrutura</h3>
+          <div class="segment-text">Apoio operacional para portos, terminais e infraestruturas estratégicas.</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- VISION -->
+<section id="vision">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow" style="justify-content:center;">Nossa Visão</div>
+      <div class="vision-divider"></div>
+      <blockquote class="vision-quote">
+        Ser a parceira que empresas escolhem para transformar operações complexas em processos <em>simples, organizados e sob controle.</em>
+      </blockquote>
+      <div class="vision-sub">FGL Brasil — Terceirização &amp; Facilities</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-layout">
+      <div class="reveal">
+        <div class="eyebrow">Contato</div>
+        <h2 class="section-title">Vamos <em>conversar</em></h2>
+        <p class="contact-info-text">Conte um pouco sobre a operação da sua empresa e descubra como a FGL Brasil pode assumir processos, pessoas e serviços com organização e eficiência.</p>
+        <!-- Placeholder de contato — substituir por dados oficiais da FGL Brasil -->
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="contact-detail-text">São Paulo — SP, Brasil</div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M4 4h16v16H4z" fill="none" stroke="none"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
+          <div class="contact-detail-text">contato@fglbrasil.com.br</div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="contact-detail-text">+55 (11) 99999-9999</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <form id="contactForm" class="contact-form" onsubmit="handleForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="f-name">Nome</label>
+              <input type="text" id="f-name" class="form-input" placeholder="Seu nome completo" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-company">Empresa</label>
+              <input type="text" id="f-company" class="form-input" placeholder="Nome da empresa" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="f-phone">Telefone</label>
+              <input type="tel" id="f-phone" class="form-input" placeholder="(00) 00000-0000" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-email">E-mail</label>
+              <input type="email" id="f-email" class="form-input" placeholder="seu@email.com.br" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-message">Mensagem</label>
+            <textarea id="f-message" class="form-textarea" placeholder="Descreva brevemente sua operação e necessidade..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Solicitar Proposta</button>
+          <p class="form-note">Nosso time entrará em contato para entender sua operação em detalhes.</p>
+        </form>
+        <div id="formSuccess" style="display:none; text-align:center; padding:48px 36px; background:var(--white); border:1px solid var(--line); border-radius:16px;">
+          <div style="width:52px; height:52px; border-radius:50%; background:var(--orange-tint); display:flex; align-items:center; justify-content:center; margin:0 auto 16px;">
+            <svg viewBox="0 0 24 24" stroke-width="2.5" style="width:24px; height:24px; stroke:var(--orange-deep); fill:none;"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <div style="font-size:19px; font-weight:800; color:var(--graphite-900);">Mensagem enviada</div>
+          <div style="font-size:14px; color:var(--graphite-500); margin-top:8px;">Nosso time entrará em contato em breve.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
 <footer>
-<p>
-<strong>Grupo FGL Brasil</strong><br>
-Terceirização de Serviços com Ética, Excelência e Compromisso Humano<br><br>
-Alphaville, SP<br><br>
-© 2026 Grupo FGL Brasil
-</p>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">FGL <span>Brasil</span></div>
+        <p class="footer-tagline">Terceirização de mão de obra, facilities e serviços operacionais para empresas.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Serviços</div>
+        <ul class="footer-links">
+          <li><a href="#services">Portaria e Recepção</a></li>
+          <li><a href="#services">Limpeza e Conservação</a></li>
+          <li><a href="#services">Manutenção Predial</a></li>
+          <li><a href="#services">Apoio Administrativo</a></li>
+          <li><a href="#services">Gestão de Equipes</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Segmentos</div>
+        <ul class="footer-links">
+          <li><a href="#segments">Condomínios</a></li>
+          <li><a href="#segments">Indústrias</a></li>
+          <li><a href="#segments">Centros Logísticos</a></li>
+          <li><a href="#segments">Agronegócio</a></li>
+          <li><a href="#segments">Energia</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Empresa</div>
+        <ul class="footer-links">
+          <li><a href="#about">Quem Somos</a></li>
+          <li><a href="#facilities">Facilities</a></li>
+          <li><a href="#how">Como Funciona</a></li>
+          <li><a href="#vision">Visão</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 FGL Brasil — Todos os direitos reservados</div>
+      <div class="footer-legal">
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos de Uso</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
-<a class="whats" href="https://wa.me/5511978316351?text=Olá%20Robson,%20tudo%20bem?%20Vim%20pelo%20site%20da%20FGL%20Brasil%20e%20gostaria%20de%20solicitar%20um%20orçamento%20personalizado.%20Posso%20te%20passar%20algumas%20informações%20da%20operação.">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="32">
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
 </a>
 
-</body>
-</html>
+<script>
+// ─── NAVBAR SCROLL ─────────────────────────────────────────
+var navbar = document.getElementById('navbar');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 40) navbar.classList.add('scrolled');
+  else navbar.classList.remove('scrolled');
+}, { passive: true });
 
+// ─── MOBILE MENU ───────────────────────────────────────────
+function toggleMenu() {
+  var menu = document.getElementById('mobileMenu');
+  var btn = document.getElementById('hamburger');
+  var isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+}
 
+// ─── REVEAL ON SCROLL ──────────────────────────────────────
+var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var revealEls = document.querySelectorAll('.reveal');
+if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+  revealEls.forEach(function(el) { el.classList.add('visible'); });
+} else {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(function(el) { observer.observe(el); });
+}
+
+// ─── FORM HANDLER ──────────────────────────────────────────
+function handleForm(e) {
+  e.preventDefault();
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+
+// ─── ACTIVE NAV LINK ───────────────────────────────────────
+var sections = document.querySelectorAll('section[id]');
+var navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
+window.addEventListener('scroll', function() {
+  var current = '';
+  sections.forEach(function(s) {
+    if (window.scrollY >= s.offsetTop - 130) current = s.id;
+  });
+  navLinks.forEach(function(a) {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+}, { passive: true });
+</script>
 </body>
 </html>
