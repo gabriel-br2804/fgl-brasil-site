@@ -12,11 +12,11 @@
 <meta property="og:description" content="Apoio operacional para armazéns, centros de distribuição e cadeias de suprimento, com mão de obra qualificada para movimentação, conferência e organização de fluxo.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="servico-logistica.jpg">
+<meta property="og:image" content="servico-logistica.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Logística | FGL Brasil">
 <meta name="twitter:description" content="Apoio operacional para armazéns, centros de distribuição e cadeias de suprimento, com mão de obra qualificada para movimentação, conferência e organização de fluxo.">
-<meta name="twitter:image" content="servico-logistica.jpg">
+<meta name="twitter:image" content="servico-logistica.png">
 <meta name="theme-color" content="#ffffff">
 
 <link rel="icon" type="image/png" href="favicon.png">
@@ -41,7 +41,17 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.html#about">Quem Somos</a></li>
-      <li><a href="index.html#services">Serviços</a></li>
+      <li class="nav-dropdown">
+        <a href="index.html#services" class="nav-dropdown-trigger">Serviços <svg viewBox="0 0 24 24" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="servico-portaria.html">Portaria e Recepção</a>
+          <a href="servico-limpeza.html">Limpeza e Conservação</a>
+          <a href="servico-logistica.html">Logística</a>
+          <a href="servico-jardinagem.html">Jardinagem e Paisagismo</a>
+          <a href="servico-administrativo.html">Apoio Administrativo</a>
+          <a href="servico-gestaoequipes.html">Gestão de Equipes</a>
+        </div>
+      </li>
       <li><a href="index.html#facilities">Facilities</a></li>
       <li><a href="index.html#how">Como Funciona</a></li>
       <li><a href="index.html#segments">Segmentos</a></li>
@@ -57,7 +67,17 @@
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" onclick="toggleMenu()" aria-label="Fechar menu">&times;</button>
   <a href="index.html#about" onclick="toggleMenu()">Quem Somos</a>
-  <a href="index.html#services" onclick="toggleMenu()">Serviços</a>
+  <details>
+    <summary>Serviços</summary>
+    <div class="sub-links">
+      <a href="servico-portaria.html" onclick="toggleMenu()">Portaria e Recepção</a>
+      <a href="servico-limpeza.html" onclick="toggleMenu()">Limpeza e Conservação</a>
+      <a href="servico-logistica.html" onclick="toggleMenu()">Logística</a>
+      <a href="servico-jardinagem.html" onclick="toggleMenu()">Jardinagem e Paisagismo</a>
+      <a href="servico-administrativo.html" onclick="toggleMenu()">Apoio Administrativo</a>
+      <a href="servico-gestaoequipes.html" onclick="toggleMenu()">Gestão de Equipes</a>
+    </div>
+  </details>
   <a href="index.html#facilities" onclick="toggleMenu()">Facilities</a>
   <a href="index.html#solutions" onclick="toggleMenu()">Soluções</a>
   <a href="index.html#how" onclick="toggleMenu()">Como Funciona</a>
@@ -70,7 +90,7 @@
 <!-- SERVICE HERO -->
 <section class="svc-hero" aria-label="Logística">
   <div class="svc-hero-media" aria-hidden="true">
-    <img src="servico-logistica.jpg" alt="" width="1600" height="1000">
+    <img src="servico-logistica.png" alt="" width="1600" height="1000">
   </div>
   <div class="container">
     <a href="index.html#services" class="svc-breadcrumb">&larr; Voltar para Serviços</a>

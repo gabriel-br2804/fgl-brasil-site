@@ -53,7 +53,17 @@
     </a>
     <ul class="nav-links">
       <li><a href="#about">Quem Somos</a></li>
-      <li><a href="#services">Serviços</a></li>
+      <li class="nav-dropdown">
+        <a href="#services" class="nav-dropdown-trigger">Serviços <svg viewBox="0 0 24 24" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="servico-portaria.html">Portaria e Recepção</a>
+          <a href="servico-limpeza.html">Limpeza e Conservação</a>
+          <a href="servico-logistica.html">Logística</a>
+          <a href="servico-jardinagem.html">Jardinagem e Paisagismo</a>
+          <a href="servico-administrativo.html">Apoio Administrativo</a>
+          <a href="servico-gestaoequipes.html">Gestão de Equipes</a>
+        </div>
+      </li>
       <li><a href="#facilities">Facilities</a></li>
       <li><a href="#how">Como Funciona</a></li>
       <li><a href="#segments">Segmentos</a></li>
@@ -69,7 +79,17 @@
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" onclick="toggleMenu()" aria-label="Fechar menu">&times;</button>
   <a href="#about" onclick="toggleMenu()">Quem Somos</a>
-  <a href="#services" onclick="toggleMenu()">Serviços</a>
+  <details>
+    <summary>Serviços</summary>
+    <div class="sub-links">
+      <a href="servico-portaria.html" onclick="toggleMenu()">Portaria e Recepção</a>
+      <a href="servico-limpeza.html" onclick="toggleMenu()">Limpeza e Conservação</a>
+      <a href="servico-logistica.html" onclick="toggleMenu()">Logística</a>
+      <a href="servico-jardinagem.html" onclick="toggleMenu()">Jardinagem e Paisagismo</a>
+      <a href="servico-administrativo.html" onclick="toggleMenu()">Apoio Administrativo</a>
+      <a href="servico-gestaoequipes.html" onclick="toggleMenu()">Gestão de Equipes</a>
+    </div>
+  </details>
   <a href="#facilities" onclick="toggleMenu()">Facilities</a>
   <a href="#solutions" onclick="toggleMenu()">Soluções</a>
   <a href="#how" onclick="toggleMenu()">Como Funciona</a>
@@ -134,18 +154,18 @@
   </div>
   <div class="clients-marquee" aria-hidden="true">
     <div class="clients-track">
-      <img src="cliente-sertic.png" alt="Sertic Comércio &amp; Importação" loading="lazy" width="600" height="600">
-      <img src="cliente-ux.png" alt="UX." loading="lazy" width="450" height="450">
-      <img src="cliente-magalu.png" alt="Magalu" loading="lazy" width="1920" height="1920">
-      <img src="cliente-sertic.png" alt="" loading="lazy" width="600" height="600">
-      <img src="cliente-ux.png" alt="" loading="lazy" width="450" height="450">
-      <img src="cliente-magalu.png" alt="" loading="lazy" width="1920" height="1920">
-      <img src="cliente-sertic.png" alt="" loading="lazy" width="600" height="600">
-      <img src="cliente-ux.png" alt="" loading="lazy" width="450" height="450">
-      <img src="cliente-magalu.png" alt="" loading="lazy" width="1920" height="1920">
-      <img src="cliente-sertic.png" alt="" loading="lazy" width="600" height="600">
-      <img src="cliente-ux.png" alt="" loading="lazy" width="450" height="450">
-      <img src="cliente-magalu.png" alt="" loading="lazy" width="1920" height="1920">
+      <div class="client-card"><img src="cliente-sertic.png" alt="Sertic Comércio &amp; Importação" loading="lazy" width="600" height="600"></div>
+      <div class="client-card"><img src="cliente-ux.png" alt="UX." loading="lazy" width="450" height="450"></div>
+      <div class="client-card"><img src="cliente-magalu.png" alt="Magalu" loading="lazy" width="1920" height="1920"></div>
+      <div class="client-card" aria-hidden="true"><img src="cliente-sertic.png" alt="" loading="lazy" width="600" height="600"></div>
+      <div class="client-card" aria-hidden="true"><img src="cliente-ux.png" alt="" loading="lazy" width="450" height="450"></div>
+      <div class="client-card" aria-hidden="true"><img src="cliente-magalu.png" alt="" loading="lazy" width="1920" height="1920"></div>
+      <div class="client-card" aria-hidden="true"><img src="cliente-sertic.png" alt="" loading="lazy" width="600" height="600"></div>
+      <div class="client-card" aria-hidden="true"><img src="cliente-ux.png" alt="" loading="lazy" width="450" height="450"></div>
+      <div class="client-card" aria-hidden="true"><img src="cliente-magalu.png" alt="" loading="lazy" width="1920" height="1920"></div>
+      <div class="client-card" aria-hidden="true"><img src="cliente-sertic.png" alt="" loading="lazy" width="600" height="600"></div>
+      <div class="client-card" aria-hidden="true"><img src="cliente-ux.png" alt="" loading="lazy" width="450" height="450"></div>
+      <div class="client-card" aria-hidden="true"><img src="cliente-magalu.png" alt="" loading="lazy" width="1920" height="1920"></div>
     </div>
   </div>
 </section>
