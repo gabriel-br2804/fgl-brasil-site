@@ -256,12 +256,13 @@
       <p class="section-body">Veja de perto como estruturamos equipes, processos e serviços que sustentam a operação da sua empresa.</p>
     </div>
     <div class="video-frame reveal" id="videoFrame">
-      <video id="fglVideo" poster="equipe-hero.png" preload="metadata" playsinline controls>
+      <video id="fglVideo" poster="equipe-hero.png" preload="auto" muted loop playsinline controls>
         <source src="video-fgl.mp4" type="video/mp4">
         Seu navegador não oferece suporte à reprodução deste vídeo. <a href="video-fgl.mp4">Baixe o vídeo aqui</a>.
       </video>
-      <button class="video-play" id="videoPlay" aria-label="Reproduzir vídeo" type="button">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <button class="video-mute" id="videoMute" aria-label="Ativar som" aria-pressed="false" type="button">
+        <svg viewBox="0 0 24 24" class="icon-off"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M23 9l-6 6M17 9l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        <svg viewBox="0 0 24 24" class="icon-on" hidden><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 010 7M18.5 6a9 9 0 010 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
       </button>
     </div>
   </div>

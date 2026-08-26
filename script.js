@@ -31,14 +31,34 @@ if (prefersReducedMotion || !('IntersectionObserver' in window)) {
   revealEls.forEach(function(el) { observer.observe(el); });
 }
 
-// ─── VIDEO PLAY BUTTON ─────────────────────────────────────
+// ─── VIDEO: AUTOPLAY ON SCROLL INTO VIEW ────────────────────
 var fglVideo = document.getElementById('fglVideo');
 var videoFrame = document.getElementById('videoFrame');
-var videoPlayBtn = document.getElementById('videoPlay');
-if (fglVideo && videoFrame && videoPlayBtn) {
-  videoPlayBtn.addEventListener('click', function() { fglVideo.play(); });
-  fglVideo.addEventListener('play', function() { videoFrame.classList.add('playing'); });
-  fglVideo.addEventListener('pause', function() { videoFrame.classList.remove('playing'); });
+if (fglVideo && videoFrame) {
+  if ('IntersectionObserver' in window) {
+    var videoObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) { fglVideo.play().catch(function(){}); }
+        else { fglVideo.pause(); }
+      });
+    }, { threshold: 0.4 });
+    videoObserver.observe(videoFrame);
+  } else {
+    fglVideo.play().catch(function(){});
+  }
+}
+
+// ─── VIDEO: MUTE TOGGLE ──────────────────────────────────────
+var videoMuteBtn = document.getElementById('videoMute');
+if (fglVideo && videoMuteBtn) {
+  videoMuteBtn.addEventListener('click', function() {
+    fglVideo.muted = !fglVideo.muted;
+    var isMuted = fglVideo.muted;
+    videoMuteBtn.setAttribute('aria-pressed', String(!isMuted));
+    videoMuteBtn.setAttribute('aria-label', isMuted ? 'Ativar som' : 'Silenciar');
+    videoMuteBtn.querySelector('.icon-off').hidden = !isMuted;
+    videoMuteBtn.querySelector('.icon-on').hidden = isMuted;
+  });
 }
 
 // ─── ACTIVE NAV LINK ───────────────────────────────────────
