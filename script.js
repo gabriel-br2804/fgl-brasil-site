@@ -1,9 +1,13 @@
-// ─── NAVBAR SCROLL ─────────────────────────────────────────
-var navbar = document.getElementById('navbar');
-window.addEventListener('scroll', function() {
-  if (window.scrollY > 40) navbar.classList.add('scrolled');
-  else navbar.classList.remove('scrolled');
-}, { passive: true });
+// ─── SCROLL TO TOP ───────────────────────────────────────────
+var scrollTopBtn = document.getElementById('scrollTop');
+if (scrollTopBtn) {
+  window.addEventListener('scroll', function() {
+    scrollTopBtn.classList.toggle('visible', window.scrollY > 600);
+  }, { passive: true });
+  scrollTopBtn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 // ─── MOBILE MENU ───────────────────────────────────────────
 function toggleMenu() {
@@ -41,7 +45,7 @@ if (fglVideo && videoFrame) {
         if (entry.isIntersecting) { fglVideo.play().catch(function(){}); }
         else { fglVideo.pause(); }
       });
-    }, { threshold: 0.4 });
+    }, { threshold: 0.2 });
     videoObserver.observe(videoFrame);
   } else {
     fglVideo.play().catch(function(){});
