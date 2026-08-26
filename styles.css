@@ -315,30 +315,6 @@ nav.scrolled { border-bottom-color: var(--line); box-shadow: 0 4px 20px rgba(28,
 .about-highlight-title { font-size: 14px; font-weight: 700; color: var(--graphite-900); margin-bottom: 4px; }
 .about-highlight-text { font-size: 13px; color: var(--graphite-500); line-height: 1.5; }
 
-/* ─── SERVICES ─── */
-#services { padding: 120px 0; background: var(--off-white); }
-.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-@media(max-width:900px){ .services-grid { grid-template-columns: 1fr 1fr; } }
-@media(max-width:620px){ .services-grid { grid-template-columns: 1fr; } }
-.service-card {
-  background: var(--white); border: 1px solid var(--line); border-radius: 14px;
-  padding: 34px 30px; transition: border-color 0.4s var(--ease), box-shadow 0.4s var(--ease), transform 0.4s var(--ease);
-  display: flex; flex-direction: column;
-}
-.service-card:hover { border-color: var(--orange); box-shadow: 0 24px 48px rgba(28,31,36,0.1); transform: translateY(-6px); }
-.service-num { font-size: 12px; font-weight: 800; color: var(--orange-deep); letter-spacing: 1px; display: block; margin-bottom: 18px; }
-.service-icon {
-  width: 46px; height: 46px; border-radius: 10px; background: var(--orange-tint);
-  display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
-}
-.service-icon svg { width: 22px; height: 22px; stroke: var(--orange-deep); fill: none; }
-.service-title { font-size: 18.5px; font-weight: 700; color: var(--graphite-900); margin-bottom: 10px; letter-spacing: -0.2px; }
-.service-text { font-size: 14px; color: var(--graphite-500); line-height: 1.65; margin-bottom: 18px; flex: 1; }
-.service-link { font-size: 13.5px; font-weight: 700; color: var(--graphite-900); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: auto; }
-.service-link:hover { color: var(--orange-deep); gap: 10px; }
-.service-link svg { width: 15px; height: 15px; transition: transform 0.25s var(--ease); }
-.service-link:hover svg { transform: translateX(3px); }
-
 /* ─── FACILITIES (dark feature band) ─── */
 #facilities {
   padding: 130px 0; background: var(--graphite-900); color: var(--white);
@@ -567,3 +543,35 @@ footer { background: var(--graphite-900); color: rgba(255,255,255,0.7); padding:
   transition: border-color 0.25s var(--ease), color 0.25s var(--ease), background 0.25s var(--ease);
 }
 .svc-related-links a:hover { border-color: var(--orange-deep); color: var(--orange-deep); background: var(--orange-tint); }
+
+/* ─── MOBILE: LEAN & CONVERSION-FOCUSED ─── */
+@media(max-width:768px){
+  #about, #solutions, #differentials, #segments { padding: 64px 0; }
+  #facilities, #how, #vision, #contact { padding: 68px 0; }
+  .clients { padding: 40px 0; }
+  .svc-body { padding: 52px 0 20px; }
+  .svc-related { padding: 8px 0 56px; }
+
+  .section-header { margin-bottom: 36px; }
+  .hero-btns { margin-bottom: 32px; gap: 10px; }
+  .hero-btns .btn { flex: 1 1 auto; justify-content: center; }
+  .hero-pillars { gap: 16px 22px; }
+
+  .about-grid, .facilities-grid, .contact-layout { gap: 32px; }
+  .about-highlights { gap: 10px; margin-top: 24px; }
+  .capability-tile { padding: 24px 20px; }
+
+  .timeline-step { margin-bottom: 28px; }
+  #how { padding-top: 56px; }
+
+  .vision-quote { margin-bottom: 20px; }
+
+  .contact-cta-card { padding: 32px 26px; }
+  .contact-cta-title { font-size: 21px; }
+
+  .facilities-note { padding: 24px; }
+  .facilities-list li { padding: 13px 16px; font-size: 14px; }
+
+  footer { padding-top: 52px; }
+  .footer-grid { gap: 32px; padding-bottom: 32px; }
+}
