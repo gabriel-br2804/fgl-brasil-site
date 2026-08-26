@@ -215,10 +215,13 @@
       linear-gradient(0deg, rgba(15,17,20,0.9) 0%, rgba(15,17,20,0.05) 40%);
   }
   @media(max-width:768px){
+    #hero { display: block; min-height: auto; padding: 84px 0 64px; }
+    .hero-media { position: relative; inset: auto; height: 56vh; min-height: 360px; z-index: 0; }
+    .hero-media img { position: absolute; inset: 0; object-position: 74% 18%; transform: none; animation: none; }
     .hero-media::after {
-      background:
-        linear-gradient(180deg, rgba(15,17,20,0.55) 0%, rgba(15,17,20,0.75) 55%, rgba(15,17,20,0.97) 100%);
+      background: linear-gradient(180deg, rgba(15,17,20,0.1) 0%, rgba(15,17,20,0.55) 68%, var(--graphite-900) 100%);
     }
+    .hero-grid { position: relative; z-index: 1; padding-top: 32px; max-width: none; }
   }
 
   .hero-grid { position: relative; z-index: 1; max-width: 640px; }
@@ -519,7 +522,7 @@
 <!-- HERO -->
 <section id="hero" aria-label="Apresentação">
   <div class="hero-media" aria-hidden="true">
-    <img src="equipe-hero.jpg" alt="" width="1536" height="1024" fetchpriority="high">
+    <img src="equipe-hero.png" alt="" width="1536" height="1024" fetchpriority="high">
   </div>
   <div class="container">
     <div class="hero-grid">
