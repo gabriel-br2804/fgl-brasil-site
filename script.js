@@ -31,6 +31,16 @@ if (prefersReducedMotion || !('IntersectionObserver' in window)) {
   revealEls.forEach(function(el) { observer.observe(el); });
 }
 
+// ─── VIDEO PLAY BUTTON ─────────────────────────────────────
+var fglVideo = document.getElementById('fglVideo');
+var videoFrame = document.getElementById('videoFrame');
+var videoPlayBtn = document.getElementById('videoPlay');
+if (fglVideo && videoFrame && videoPlayBtn) {
+  videoPlayBtn.addEventListener('click', function() { fglVideo.play(); });
+  fglVideo.addEventListener('play', function() { videoFrame.classList.add('playing'); });
+  fglVideo.addEventListener('pause', function() { videoFrame.classList.remove('playing'); });
+}
+
 // ─── ACTIVE NAV LINK ───────────────────────────────────────
 var sections = document.querySelectorAll('section[id]');
 var navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
