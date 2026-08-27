@@ -52,19 +52,6 @@ if (fglVideo && videoFrame) {
   }
 }
 
-// ─── VIDEO: MUTE TOGGLE ──────────────────────────────────────
-var videoMuteBtn = document.getElementById('videoMute');
-if (fglVideo && videoMuteBtn) {
-  videoMuteBtn.addEventListener('click', function() {
-    fglVideo.muted = !fglVideo.muted;
-    var isMuted = fglVideo.muted;
-    videoMuteBtn.setAttribute('aria-pressed', String(!isMuted));
-    videoMuteBtn.setAttribute('aria-label', isMuted ? 'Ativar som' : 'Silenciar');
-    videoMuteBtn.querySelector('.icon-off').hidden = !isMuted;
-    videoMuteBtn.querySelector('.icon-on').hidden = isMuted;
-  });
-}
-
 // ─── ACTIVE NAV LINK ───────────────────────────────────────
 var sections = document.querySelectorAll('section[id]');
 var navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
